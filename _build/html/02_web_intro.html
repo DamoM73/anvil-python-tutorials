@@ -1,13 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="en" data-content_root="./">
-  <head>
-<meta charset="utf-8"/>
+  <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="#" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="StudyM8 Design" href="03_studyM8_design.html" /><link rel="prev" title="Introduction" href="01_introduction.html" />
 
     <link rel="shortcut icon" href="_static/logo.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-<meta name="robots" content="noindex" />
-<title>Search - StudyM8</title><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+        <title>How websites work - StudyM8</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
@@ -195,7 +195,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -212,16 +212,16 @@
   
   <span class="sidebar-brand-text">StudyM8</span>
   
-</a><form class="sidebar-search-container" method="get" action="#" role="search">
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01_introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_web_intro.html">How websites work</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">How websites work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_studyM8_design.html">StudyM8 Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_create_app.html">Create new app</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_anvil_interface.html">Anvil Interface</a></li>
@@ -275,7 +275,13 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/02_web_intro.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
@@ -284,31 +290,99 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          
-<noscript>
-<div class="admonition error">
-  <p class="admonition-title">Error</p>
-  <p>
-    Please activate JavaScript to enable the search functionality.
-  </p>
-</div>
-</noscript>
-
-<div id="search-results"></div>
+          <section id="how-websites-work">
+<h1>How websites work<a class="headerlink" href="#how-websites-work" title="Link to this heading">¶</a></h1>
+<aside class="topic">
+<p class="topic-title">In this lesson you will:</p>
+<ul class="simple">
+<li><p>Learn how your computer accesses websites</p></li>
+</ul>
+</aside>
+<section id="there-is-no-cloud">
+<h2>There is no cloud<a class="headerlink" href="#there-is-no-cloud" title="Link to this heading">¶</a></h2>
+<p>We have all heard about ‘The Cloud’ as a term that refers to where files are located that aren’t on your device. It often seems like our computers are connected to some amorphous entity wich magically stores and provide information.</p>
+<p><img alt="cloud computer" src="_images/cloud_computing.png" /></p>
+<p>As is often the case, this is a over-simplifaction for marketing purposes. It allows non-technical people to comprehend concepts enough to use them. In order to create websites, we need a much more technical understanding how the web works.</p>
+</section>
+<section id="frontend-and-backend">
+<h2>Frontend and Backend<a class="headerlink" href="#frontend-and-backend" title="Link to this heading">¶</a></h2>
+<p>In truth there is no cloud, it is just someone else’s computer (a phrase that has inspired many memes). The diagram below is better representation of how you access websites. It is still quite simple, but it will be suffice for our purposes.</p>
+<p><img alt="frontend backend" src="_images/frontend_backend.png" /></p>
+<p><strong>Frontend:</strong></p>
+<ul class="simple">
+<li><p>refers to the processes that occur on your device</p></li>
+<li><p>also called <strong>client-side</strong></p></li>
+<li><p>is the part of the application that users interact with directly, such as the layout, design, buttons, images, and forms on a website.</p></li>
+</ul>
+<p><strong>Backend:</strong></p>
+<ul class="simple">
+<li><p>refers to the processes that occur on the web server</p></li>
+<li><p>also called <strong>server-side</strong></p></li>
+<li><p>is remote to the device and accessed through the internet</p></li>
+<li><p>handles data processing, storage, and retrieval, ensuring that the frontend receives the necessary data to display to the user</p></li>
+</ul>
+<section id="the-web-restaurant">
+<h3>The web restaurant<a class="headerlink" href="#the-web-restaurant" title="Link to this heading">¶</a></h3>
+<p>The easiest way to think about frontend and backend is if you imagine dining at a restaurant.</p>
+<p>The front end is like the waiter, while the backend is like the chef:</p>
+<ul class="simple">
+<li><p>the waiter will provide you with the menu to choose your meal</p></li>
+<li><p>the waiter will take your order and give it to the chef</p></li>
+<li><p>the chef will use ingredients to complete your order</p></li>
+<li><p>the chef will then get the waiter to take your order back to you</p></li>
+</ul>
+<p>Notice that:</p>
+<ul class="simple">
+<li><p>all your interactions with the chef go through the waiter</p></li>
+<li><p>the waiter doesn’t do any of the cooking</p></li>
+<li><p>the chef will need to access stored resources to complete your order</p></li>
+</ul>
+</section>
+<section id="real-world">
+<h3>Real world<a class="headerlink" href="#real-world" title="Link to this heading">¶</a></h3>
+<p>In the same way the frontend and backend work together to serve you websites:</p>
+<ul class="simple">
+<li><p>you enter a website address</p></li>
+<li><p>the frontend then goes to that address and asks the backend for the website</p></li>
+<li><p>the backend uses the stored resources (images, text, code, etc.) to create the requested website</p></li>
+<li><p>the backend then sends these to the frontend</p></li>
+<li><p>the frontend then displays the website on your screen.</p></li>
+</ul>
+</section>
+</section>
+</section>
 
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="03_studyM8_design.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">StudyM8 Design</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="01_introduction.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Introduction</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -334,8 +408,32 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">How websites work</a><ul>
+<li><a class="reference internal" href="#there-is-no-cloud">There is no cloud</a></li>
+<li><a class="reference internal" href="#frontend-and-backend">Frontend and Backend</a><ul>
+<li><a class="reference internal" href="#the-web-restaurant">The web restaurant</a></li>
+<li><a class="reference internal" href="#real-world">Real world</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
@@ -346,8 +444,5 @@
     <script src="_static/scripts/furo.js?v=4e2eecee"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    
-<script src="_static/searchtools.js"></script>
-<script src="_static/language_data.js"></script>
-<script src="searchindex.js"></script></body>
+    </body>
 </html>
