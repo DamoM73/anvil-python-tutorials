@@ -195,7 +195,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -236,10 +236,26 @@
 <li class="toctree-l1"><a class="reference internal" href="14_user_features.html">User Features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="15_account_links_visiability.html">Account Links Visability</a></li>
 <li class="toctree-l1"><a class="reference internal" href="16_set_details.html">SetDetailsComponent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="17_user_service.html">Create User Server Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_user_service.html">User Server Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="18_set_details_nav.html">SetDetailsComponent Navigation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="19_account_cmpt.html">AccountComponent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="20_switch_components.html">Switch Component Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_complete_account_cmpt.html">Compelte Account Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_assessment_table.html">The Assessments Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23_add_component.html">Add Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24_assessment_service.html">Assessment Service Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25_restrict_accessibility.html">Prevent Unauthorised Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26_home_user_cmpt.html">User Home Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27_complete_assessment.html">Complete Assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="28_edit_assessment.html">Edit Assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="29_calendar_cmpt.html">Calendar Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="30_welcome.html">Welcome Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31_optimisation.html">Optimisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32_remote_database.html">Reduce Remote Database Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33_logout_func.html">Create Logout Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="34_update_user_func.html">Create Update User Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="35_my_assess_func.html">My Aseessments Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="36_local_database.html">Reduce Local Database Access</a></li>
 </ul>
 
 </div>
@@ -274,7 +290,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -282,6 +298,41 @@
         <article role="main" id="furo-main-content">
           <section id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<p>In this course, we will explore the exciting world of web development, learning how to create interactive and dynamic websites using Anvil, a platform that allows us to build web applications entirely with Python. By the end of the course, we will have the skills to design, develop, and deploy our very own web applications, which  can be share with friends, family, and the broader community.</p>
+<section id="importance-of-web-development">
+<h2>Importance of web development<a class="headerlink" href="#importance-of-web-development" title="Link to this heading">¶</a></h2>
+<p>Web development is crucial in today’s digital age as it serves as the backbone for creating and maintaining websites and web applications that are essential for businesses, education, and personal use. It enables us to establish an online presence, reach a global audience, and provide interactive and dynamic user experiences. By mastering web development, we will gain the ability to build platforms for e-commerce, social networking, information sharing, and much more.</p>
+</section>
+<section id="the-project">
+<h2>The Project<a class="headerlink" href="#the-project" title="Link to this heading">¶</a></h2>
+<p>To assist in this journey, we will create an application to assist students in planning their study. The app allows users to upload their assessment details and then it will then track assessments and provide a calendar which shows when the most assessment pressure is. Check the link below to see the finished app.</p>
+<p><strong><a href="https://studym8.anvil.app" target="_blank">StudyM8</a></strong></p>
+</section>
+<section id="required-knowledge">
+<h2>Required Knowledge<a class="headerlink" href="#required-knowledge" title="Link to this heading">¶</a></h2>
+<p>Scince Anvil apps are written in Python, you will only need to know one programming language. You don’t even need to know HTML or CSS (they can be useful for more advanced features).</p>
+<p>Before starting this course you will need foundational Python skills along with some more intermediate knowledge. The table below details the skillset, along with my other courses that will provide such knowledge.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Skills</p></th>
+<th class="head text-left"><p>Course</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Basic syntax and structure<br>Control flow<br>Functions<br>Data structures</p></td>
+<td class="text-left"><p><strong><a href="https://damom73.github.io/turtle-introduction-to-python/" target="_blank">A Turtle Introduction to Python</a></strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Object Orientated Programming</p></td>
+<td class="text-left"><p><strong><a href="https://damom73.github.io/python-oop-with-deepest-dungeon/" target="_blank">Deepest Dungeon - Python OOP</a></strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Modules and Libraries</p></td>
+<td class="text-left"><p><strong><a href="https://damom73.github.io/space-rescue-tutorials/" target="_blank">Space Rescue</a></strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 </section>
 
         </article>
@@ -334,8 +385,29 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Introduction</a><ul>
+<li><a class="reference internal" href="#importance-of-web-development">Importance of web development</a></li>
+<li><a class="reference internal" href="#the-project">The Project</a></li>
+<li><a class="reference internal" href="#required-knowledge">Required Knowledge</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
