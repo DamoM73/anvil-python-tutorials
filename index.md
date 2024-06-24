@@ -8,7 +8,6 @@ In these tutorials you will develop a study planner website using the Anvil plat
 :maxdepth: 1
 :caption: "Contents:"
 01_introduction
-02_setup
 03_web_intro
 04_studyM8_design
 05_create_app

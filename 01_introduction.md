@@ -24,3 +24,17 @@ Before starting this course you will need foundational Python skills along with 
 | Object Orientated Programming | **<a href="https://damom73.github.io/python-oop-with-deepest-dungeon/" target="_blank">Deepest Dungeon - Python OOP</a>** |
 | Modules and Libraries | **<a href="https://damom73.github.io/space-rescue-tutorials/" target="_blank">Space Rescue</a>** |
 
+
+## Starting with Anvil
+
+To access the Anvil platform go to **<a href="https://anvil.works/" target="_blank">https://anvil.works/</a>**
+https://anvil.works/.
+
+For some of the features in this course, you will need to sign-up for a personal account.
+
+```{admonition} Education Licences
+:class: note
+If you are a teacher or student, Anvil offers free education licences. Just go to their **<a href="https://anvil.works/pricing" target="_blank">pricing page</a>**  and contact them. 
+```
+
+Once you have an account, then it is time for us to start making websites.
