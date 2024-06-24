@@ -8,7 +8,7 @@
 
 We have all heard about 'The Cloud' as a term that refers to where files are located that aren't on your device. It often seems like our computers are connected to some amorphous entity wich magically stores and provide information.
 
-![cloud computer](./assets/img/cloud_computing.png)
+![cloud computer](./assets/img/02/cloud_computing.png)
 
 As is often the case, this is a over-simplifaction for marketing purposes. It allows non-technical people to comprehend concepts enough to use them. In order to create websites, we need a much more technical understanding how the web works. 
 
@@ -16,7 +16,7 @@ As is often the case, this is a over-simplifaction for marketing purposes. It al
 
 In truth there is no cloud, it is just someone else's computer (a phrase that has inspired many memes). The diagram below is better representation of how you access websites. It is still quite simple, but it will be suffice for our purposes.
 
-![frontend backend](./assets/img/frontend_backend.png)
+![frontend backend](./assets/img/02/frontend_backend.png)
 
 **Frontend:**
 

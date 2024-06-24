@@ -1,3 +1,0 @@
-# Optimisation
-
-## Causes of Latency

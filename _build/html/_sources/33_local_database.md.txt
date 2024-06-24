@@ -1,2 +1,0 @@
-# Reduce Local Database Access
-
