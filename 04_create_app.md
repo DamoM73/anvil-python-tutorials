@@ -24,7 +24,7 @@ Once you have chosen your template, you will be taken to the Anvil interface. We
 
 ## Rename App
 
-First we will rename the app. To do this go to settings by clicking the cog icon in the left hand toolbar.
+First we will rename the app. To do this go to settings by clicking the cog icon in the left hand side menu.
 
 ![step 3](./assets/img/04/step_03.png)
 
@@ -44,7 +44,7 @@ Click on the **Upload** button, select the logo.png file you just downloaded, th
 
 The last step is choosing your colour scheme. You can choose between pre-set schemes or customise your own. You can change the colour scheme at any time.
 
-Click on the colour pallet icon in the left hand toolbar to enter the **App Theme** menu.
+Click on the colour pallet icon in the left hand side menu to enter the **App Theme** menu.
 
 ![step 6](./assets/img/04/step_06.png)
 
