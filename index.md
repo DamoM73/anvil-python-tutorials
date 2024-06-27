@@ -14,7 +14,6 @@ In these tutorials you will develop a study planner website using the Anvil plat
 05_anvil_interface
 06_create_home_form
 07_create_components
-08_add_links
 09_connect_links
 10_set_start_component
 11_adjust_title
