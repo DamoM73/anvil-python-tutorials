@@ -1,6 +1,6 @@
 # How websites work
 
-```{topic} In this lesson you will:
+```{topic} In this tutorial you will:
 - Learn how your computer accesses websites
 ```
 

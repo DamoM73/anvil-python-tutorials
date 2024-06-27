@@ -1,5 +1,9 @@
 # Create the Main Form
 
+```{topic} In this tutorial you will:
+- 
+```
+
 Almost time to start making our website, but before we do, there is one last concept we need to understand.
 
 Looking at our **[wireframes](./03_studyM8_design.md)** you will notice that they all look very similar. The top bar, and the side menu all look the same, it is only the main content in the grey centre panel that changes. As the user navigatges from one page to another, we could just send the entire page's data each time, but this is extremely inefficient.
@@ -12,17 +16,15 @@ This means it is faster to minimise the amount of data being transferred. When c
 
 ## Single-page applications
 
-A single-page application doesn't reload every time the user navigates to a new page, but rather, it only loads the parts of the website that change. This approach results in a smoother, faster user experience akin to that of a desktop application. 
+A single-page application doesn't reload every time the user navigates to a new page, but rather, it only loads the parts of the website that change. This approach results in a smoother, faster user experience similar to that of a desktop application.
 
-How does it work? Intially a **main form** is loaded containing the content that remains constant. Then  different components or views are swapped in and out based on user interactions.
+How does it work? Intially a **main form** is loaded containing the content that remains constant. Then  different components or views are swapped in and out based on user interactions, this is called **dynamic loading**.
 
 In our design our main form would look something like this:
 
 ![main form](./assets/img/06/main_form.png)
 
-The parts that get swapped in and out of the main form are called **components**.
-
-Lets go about creating our main form.
+The parts that get dynamically loaded are called **components**, but we'll deal with those in the next tutorial. For now, lets create our main form.
 
 ## The MainForm
 

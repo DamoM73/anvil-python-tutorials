@@ -1,6 +1,6 @@
 # StudyM8 design
 
-```{topic} In this lesson you will:
+```{topic} In this tutorial you will:
 - Learn how to layout a plan for your website
 ```
 

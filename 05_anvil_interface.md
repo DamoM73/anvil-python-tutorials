@@ -1,5 +1,9 @@
 # Anvil Interface
 
+```{topic} In this tutorial you will:
+- 
+```
+
 Lets have a look at the different parts of the Anvil interface.
 
 The interface is made up of five different parts:
@@ -13,6 +17,13 @@ The interface is made up of five different parts:
 ![interface](./assets/img/05/interface.png)
 
 Lets look at each of these. along with the feature we will use
+
+```{admonition} Viewing Instruction Images
+:class: note
+Anvil is a web app, which means making instruction screen capture with adequate detail was difficult. Many of the instructions will only capture one part of the Anvil interface which should provide enough detail to read. 
+
+All screen captures on this site are actually larger than displayed. If you are find the instructions too difficult to follow, right mouse click on the image, the choose **Open image in new tab**. This will show you a larger version of the image.
+```
 
 ## Main menu
 
