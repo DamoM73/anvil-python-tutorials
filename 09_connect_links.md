@@ -85,8 +85,8 @@ Now you need to add the highlighted two lines of code:
     self.content_panel.add_component(HomeComponent())
 ```
 
-Code Explaination:
-
+```{admonition} Code explaination
+:class: notice
 - **line 14**:
   - `self` &rarr; refers to this form, ie. **HomeForm**.
   - `content_panel` &rarr; refers to the component in the HomeForm layout into which the components will be dynamically loaded.
@@ -95,6 +95,7 @@ Code Explaination:
   - `self` &rarr; refers to this form, ie. **HomeForm**.
   - `content_panel` &rarr; refers to the component in the HomeForm layout into which the components will be dynamically loaded.
   - `add_component(HomeComponent())` &rarr; will load the **HomeComponent** into the **content_panel**
+```
 
 ### Test
 
