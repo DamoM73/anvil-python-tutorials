@@ -1,7 +1,7 @@
 # Adding Components
 
 ```{topic} In this tutorial you will:
-- 
+- Learn how to create the dynamically loaded components of a Single-Page Application
 ```
 
 We now need to create all the components that will be dynamically loaded into the MainForm. Looking at our **[design](./03_studyM8_design.md)**, although we have seven pages, we only need six components, since the Edit Page is just a modified Home Page.

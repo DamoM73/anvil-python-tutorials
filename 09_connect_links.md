@@ -1,7 +1,8 @@
 # Connecting links
 
 ```{topic} In this tutorial you will:
-- 
+- Learn how to create event handlers for links click events
+- Learn how to load the dynamically loaded components into the MainForm
 ```
 
 We now need to connect the links on our MainForm to the components we just created. The will use code to make these connections. We need create a handler for each link that loads it's respective component.

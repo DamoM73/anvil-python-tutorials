@@ -1,7 +1,7 @@
 # Create new app
 
 ```{topic} In this tutorial you will:
-- 
+- Learn how to create a new app in Anvil
 ```
 
 Now that we have planned our app, it is time to create. First you need to log into **<a href="https://anvil.works/build" target="_blank">Anvil</a>**.

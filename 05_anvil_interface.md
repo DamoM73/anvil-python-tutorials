@@ -1,7 +1,7 @@
 # Anvil Interface
 
 ```{topic} In this tutorial you will:
-- 
+- Learn about hte different parts of the Anvil interface
 ```
 
 Lets have a look at the different parts of the Anvil interface.

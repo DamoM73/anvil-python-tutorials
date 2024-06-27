@@ -1,7 +1,8 @@
 # Create the Main Form
 
 ```{topic} In this tutorial you will:
-- 
+- Learn about Single-Page Applications and why they are used
+- Create the main form of a Single-Page Application
 ```
 
 Almost time to start making our website, but before we do, there is one last concept we need to understand.
@@ -12,11 +13,11 @@ In our frontend backend diagram, it is the communitication over the internet bet
 
 ![frontend backend](./assets/img/02/frontend_backend.png)
 
-This means it is faster to minimise the amount of data being transferred. When changing from the Home page to the Calendar page, why send the side menu data when it is already on the user's computer. This is where single-page applications come in.
+This means it is faster to minimise the amount of data being transferred. When changing from the Home page to the Calendar page, why send the side menu data when it is already on the user's computer. This is where Single-Page Applications come in.
 
-## Single-page applications
+## Single-Page Applications
 
-A single-page application doesn't reload every time the user navigates to a new page, but rather, it only loads the parts of the website that change. This approach results in a smoother, faster user experience similar to that of a desktop application.
+A Single-Page Application doesn't reload every time the user navigates to a new page, but rather, it only loads the parts of the website that change. This approach results in a smoother, faster user experience similar to that of a desktop application.
 
 How does it work? Intially a **main form** is loaded containing the content that remains constant. Then  different components or views are swapped in and out based on user interactions, this is called **dynamic loading**.
 

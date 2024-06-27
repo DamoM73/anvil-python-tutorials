@@ -1,7 +1,7 @@
 # StudyM8 design
 
 ```{topic} In this tutorial you will:
-- Learn how to layout a plan for your website
+- Learn how to plan a website
 ```
 
 Before we start creating our website, we need to plan what it will look like. You have already had a chance to use the finished app, but you will not normally have this opportunity. Therefore, it is best to start with an understanding of the different pages that your website is comprised of, how they fit together and what they will look like.
