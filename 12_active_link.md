@@ -171,6 +171,8 @@ Did they all act as expected?
 
 ![final test](./assets/img/11/final_test.gif)
 
+## Final code state
+
 By the end of this tutorial your code should be the same as below:
 
 ### MainForm

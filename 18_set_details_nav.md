@@ -4,6 +4,6 @@
 - 
 ```
 
-## Change Regiaster Action
+## Change Register Action
 
 ## Return to AccountComponent
