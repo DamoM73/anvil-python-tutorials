@@ -1,7 +1,7 @@
 # Adjust Page Title
 
 ```{topic} In this tutorial you will:
-- Learn how to use code to interact with the layout components
+- Learn how to dynamically interact with the layout components
 ```
 
 In this tutorial we are going to change the MainForm title into a **breadcrumb**.
