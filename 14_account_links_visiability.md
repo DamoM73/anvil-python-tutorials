@@ -12,7 +12,6 @@ Fortunately each layout element has a visability property, so we can simply set 
 
 In testing the last tutorial we used code the `anvil.users.get_user()` to show who the current logged in user was. If there was a user it returned `<LiveObject>: anvil.table.Row`, if there wasn't a user it returned `None`. According to Python **truthiness**, any object is has a Boolean value or `True`, while `None` has a Boolean value of `False`.
 
-
 ```{admonition} Python Truthiness
 :class: note
 In Python, "truthiness" refers to how values are evaluated in a boolean context, determining whether they are considered `True` or `False`. The values that return `True` are said to be **Truthy**, while the values that return `False` are called `Falsy`.
