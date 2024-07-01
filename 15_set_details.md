@@ -1,7 +1,7 @@
-# SetDetailsComponent
+# SetDetailsComponent Design
 
 ```{topic} In this tutorial you will:
-- Learn how to read values from text boxes
+- Learn how to add layout elements to a component
 ```
 
 If you look at the **user table**, you will notice that our registered users are missing their first and last names. In this tutorial we will fix this issue.
