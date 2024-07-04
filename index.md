@@ -26,6 +26,7 @@ In these tutorials you will develop a study planner website using the Anvil plat
 16_user_service
 17_set_details_nav
 18_account_cmpt
+18a_account_code
 19_switch_components
 20_complete_account_cmpt
 21_assessment_table
