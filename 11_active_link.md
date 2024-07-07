@@ -175,7 +175,7 @@ Did they all act as expected?
 
 By the end of this tutorial your code should be the same as below:
 
-### MainForm
+### Final MainForm
 
 ```{code-block} python
 :linenos:

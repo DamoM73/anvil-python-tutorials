@@ -176,3 +176,136 @@ Testing:
 4. Click save with both First name and Last name entered, the error message should disappear and their values should appear in the **terminal**
 
 ![test](./assets/img/15a/test.gif)
+
+## Final code state
+
+By the end of this tutorial your code should be the same as below:
+
+### Final SetDetailsComponent
+
+```{code-block} python
+:linenos:
+from ._anvil_designer import SetDetailsComponentTemplate
+from anvil import *
+import anvil.server
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+import anvil.users
+
+
+class SetDetailsComponent(SetDetailsComponentTemplate):
+  def __init__(self, **properties):
+    # Set Form properties and Data Bindings.
+    self.init_components(**properties)
+
+    # Any code you write here will run before the form opens.
+
+  def button_save_click(self, **event_args):
+    
+    if self.text_box_first_name.text == "":
+      self.label_error.text = "First name cannot be blank"
+      self.label_error.visible = True
+      return
+
+    if self.text_box_last_name.text == "":
+      self.label_error.text = "Last name cannot be blank"
+      self.label_error.visible = True
+      return
+
+    self.label_error.visible = False
+    print(self.text_box_first_name.text, self.text_box_last_name.text)
+```
+
+### Final MainForm
+
+```{code-block} python
+:linenos:
+from ._anvil_designer import MainFormTemplate
+from anvil import *
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+import anvil.users
+from ..HomeComponent import HomeComponent
+from ..CalendarComponent import CalendarComponent
+from ..AddComponent import AddComponent
+from ..AccountComponent import AccountComponent
+from ..SetDetailsComponent import SetDetailsComponent
+
+
+class MainForm(MainFormTemplate):
+  def __init__(self, **properties):
+    # Set Form properties and Data Bindings.
+    self.init_components(**properties)
+    self.breadcrumb_stem = self.label_title.text
+
+    # Any code you write here will run before the form opens.
+    self.content_panel.add_component(HomeComponent())
+    self.set_active_link("home")
+
+  def set_active_link(self, state):
+    if state == "home":
+      self.link_home.role = "selected"
+    else:
+      self.link_home.role = None
+    if state == "add":
+      self.link_add.role = "selected"
+    else:
+      self.link_add.role = None
+    if state == "calendar":
+      self.link_calendar.role = "selected"
+    else:
+      self.link_calendar.role = None
+
+    self.link_register.visible = not anvil.users.get_user()
+    self.link_login.visible = not anvil.users.get_user()
+    self.link_account.visible = anvil.users.get_user()
+    self.link_logout.visible = anvil.users.get_user()
+  
+  # --- link handlers
+  def link_home_click(self, **event_args):
+    self.content_panel.clear()
+    self.content_panel.add_component(HomeComponent())
+    self.label_title.text = self.breadcrumb_stem
+    self.set_active_link("home")
+
+  def link_calendar_click(self, **event_args):
+    self.content_panel.clear()
+    self.content_panel.add_component(CalendarComponent())
+    self.label_title.text = self.breadcrumb_stem + " - Calendar"
+    self.set_active_link("calendar")
+
+  def link_add_click(self, **event_args):
+    self.content_panel.clear()
+    self.content_panel.add_component(AddComponent())
+    self.label_title.text = self.breadcrumb_stem + " - Add"
+    self.set_active_link("add")
+
+  def link_account_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.content_panel.clear()
+    self.content_panel.add_component(AccountComponent())
+    self.label_title.text = self.breadcrumb_stem + " - Account"
+    self.set_active_link(("account"))
+
+  def link_register_click(self, **event_args):
+    anvil.users.signup_with_form(allow_cancel=True)
+    self.content_panel.clear()
+    self.content_panel.add_component(SetDetailsComponent())
+    self.label_title.text = self.breadcrumb_stem + " - Account - Details"
+    self.set_active_link("details")
+
+  def link_login_click(self, **event_args):
+    anvil.users.login_with_form(allow_cancel=True)
+    self.content_panel.clear()
+    self.content_panel.add_component(HomeComponent())
+    self.label_title.text = self.breadcrumb_stem
+    self.set_active_link("home")
+
+  def link_logout_click(self, **event_args):
+    anvil.users.logout()
+    self.content_panel.clear()
+    self.content_panel.add_component(HomeComponent())
+    self.label_title.text = self.breadcrumb_stem
+    self.set_active_link("home")

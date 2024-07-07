@@ -202,7 +202,7 @@ Now that is all working, we have to add details to the **AccountComponent**.
 
 By the end of this tutorial your code should be the same as below:
 
-### SetDetailsForm
+### Final SetDetailsComponent
 
 ```{code-block} python
 :linenos:

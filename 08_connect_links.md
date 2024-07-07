@@ -143,7 +143,7 @@ This could mean that your missed the `()` after the component (in this example `
 
 By the end of this tutorial your code should be as below:
 
-### MainForm
+### Final MainForm
 
 ```{code-block} python
 :linenos:

@@ -68,7 +68,7 @@ This might mean that when you pasted the `add_component` line, the indentation w
 
 By the end of this tutorial your code should be the same as below:
 
-### MainForm
+### Final MainForm
 
 ```{code-block} python
 :linenos:

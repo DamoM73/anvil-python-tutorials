@@ -172,7 +172,7 @@ If your website acts this way, then you have finished this tutorial
 
 By the end of this tutorial your code should be the same as below:
 
-### MainForm
+### Final MainForm
 
 ```{code-block} python
 :linenos:

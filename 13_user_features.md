@@ -146,7 +146,7 @@ Go back into the MainForm code and remove the three print statements.
 
 By the end of this tutorial your code should be the same as below:
 
-### MainForm
+### Final MainForm
 
 ```{code-block} python
 :linenos:

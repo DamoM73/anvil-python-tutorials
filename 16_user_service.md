@@ -143,7 +143,7 @@ Time to test if this all works.
 
 By the end of this tutorial your code should be the same as below:
 
-### SetDetailsForm
+### Final SetDetailsForm
 
 ```{code-block} python
 :linenos:
@@ -181,7 +181,7 @@ class SetDetailsComponent(SetDetailsComponentTemplate):
                       self.text_box_last_name.text)
 ```
 
-### user_service
+### Final user_service
 
 ```{code-block} python
 :linenos:
