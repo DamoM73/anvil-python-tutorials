@@ -1,7 +1,11 @@
 # Anvil Interface
 
 ```{topic} In this tutorial you will:
-- Learn about hte different parts of the Anvil interface
+- Understand the main menu for app navigation and management.
+- Explore the side menu for accessing files, tables, settings, and themes.
+- Utilize the submenu, which changes based on the selected side menu option.
+- Work in the workspace, including design mode (layout and components panel) and code mode (code panel and code snippets).
+- Use the integrated terminal for viewing print statement outputs and error messages.
 ```
 
 Lets have a look at the different parts of the Anvil interface.
@@ -61,7 +65,7 @@ The workspace is the main area where you will create your web app. What it displ
 
 ### Design mode
 
-To the left of the desing mode you have the **layout**. This is where you add and position components to make your website. To the right you have the **components panel**.
+To the left of the design mode you have the **layout**. This is where you add and position components to make your website. To the right you have the **components panel**.
 
 ![design](./assets/img/05/design_mode.png)
 
@@ -83,13 +87,13 @@ In the code mode of the workspace you will find the code panel where you write c
 
 #### Code snippets
 
-The code snippets panel list all the name componets, their properties and those properties current values.
+The code snippets panel list all the name components, their properties and those properties current values.
 
 ![code snippets](./assets/img/05/code_snippets.png)
 
 ## Terminal
 
-The intergrated terminal displays a range of output that normally occur in website development. It will display two types of outputs you are interested in:
+The integrated terminal displays a range of output that normally occur in website development. It will display two types of outputs you are interested in:
 
 - output from print statements
 - error messages

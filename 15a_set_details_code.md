@@ -1,10 +1,14 @@
 # SetDetailsComponent Code
 
 ```{topic} In this tutorial you will:
-- Write code that accepts and processes user input via a website.
+- Write code to process user input on a website.
+- Validate that both first and last name fields are not empty.
+- Display error messages for empty fields.
+- Print input details to the terminal for testing purposes.
+- Modify the registration process to load the SetDetailsComponent.
 ```
 
-Now we have the **SetDetailsComponent** layout complete, it is time ot start working on the code. This code will:
+Now we have the **SetDetailsComponent** layout complete, it is time to start working on the code. This code will:
 
 - Check that both the First name and Last name text boxes contain text
 - Display an error message if either text box is empty
@@ -24,7 +28,7 @@ The code for this component will reside within the Save button click handler. We
 
 ### Check First name text box
 
-First we will check that the First name text box is not blank. We will use a **guard clause** to achieve this. Basically it is an if statement that will use `return` to end the methoc if the the text box is empty. This will prevent the unnecessarily executing the rest of the method's code. 
+First we will check that the First name text box is not blank. We will use a **guard clause** to achieve this. Basically it is an if statement that will use `return` to end the method if the the text box is empty. This will prevent the unnecessarily executing the rest of the method's code. 
 
 ```{admonition} Guard clauses
 :class: note
@@ -70,7 +74,7 @@ In the `button_save_click` hander, remove the comment and the `pass` statement, 
 
 The obvious next step is to repeat this process for the Last name text box. 
 
-Try and work out the code yiourself before looking at the code below.
+Try and work out the code yourself before looking at the code below.
 
 ```{code-block} python
 :linenos:
@@ -91,9 +95,9 @@ Try and work out the code yiourself before looking at the code below.
 
 ### Save message
 
-Once the user has passed both guard clauses, we want to save the details to the **User table**. We will write the code for this next tutorial, but in the meanwhile we need to test this code. So rather than writting the results to the **User table** we will print them to the terminal. We also need to hide the error message.
+Once the user has passed both guard clauses, we want to save the details to the **User table**. We will write the code for this next tutorial, but in the meanwhile we need to test this code. So rather than writtng the results to the **User table** we will print them to the terminal. We also need to hide the error message.
 
-Add the higlighted code to the `button_save_click` handler.
+Add the highlighted code to the `button_save_click` handler.
 
 ```{code-block} python
 :linenos:

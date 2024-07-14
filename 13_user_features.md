@@ -1,10 +1,13 @@
 # User Management Features
 
 ```{topic} In this tutorial you will:
-- Incorporate user management features into your website.
+- Implement user registration using Anvil's built-in form.
+- Add login capabilities for existing users.
+- Create a logout function to manage user sessions.
+- Test the user management features by checking registration, login, and logout functionalities.
 ```
 
-In this tutorial you will incorporate usermangement features to allow users to:
+In this tutorial you will incorporate user management features to allow users to:
 
 - Register for an account
 - Login with a registered account
@@ -138,7 +141,7 @@ Click on the Terminal tab and you should have the three messages below.
 
 ### Tidy up
 
-If you recieved the same messages, your test passed.
+If you received the same messages, your test passed.
 
 Go back into the MainForm code and remove the three print statements.
 

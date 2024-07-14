@@ -1,8 +1,10 @@
 # AccountComponent Code
 
 ```{topic} In this tutorial you will:
-- Create the code that will displayer the user's details
-- Connect the edit button to the **SetDetailsComponent**
+- Retrieve and display the user's details using `anvil.users.get_user()`.
+- Link the Edit Details button to the SetDetailsComponent.
+- Understand and resolve circular references in code imports.
+- Refactor navigation code for better organization and maintenance.
 ```
 
 ## Planning
@@ -38,11 +40,11 @@ We want to load the first and last name before the form opens, so this means we 
     self.label_last_name.text = user["last_name"]
 ```
 
-This should occur every time that the **AccoutnComponent** is loaded.
+This should occur every time that the **AccountComponent** is loaded.
 
 #### Test user details display
 
-Let's test this firt stage. Launch your webiste.
+Let's test this first stage. Launch your website.
 
 1. Login if you have to
 2. Click on the Account link
@@ -158,14 +160,14 @@ If you look at the highlighted lines your will notice that:
 
 So when you website launches and it reads all the code, the **AccountsComponent** wants to load all the code from the **SetDetailsComponent** which wants to load all the code from the **AccountsComponent** which wants to load all the code from the **SetDetailsComponent** which wants to load all the code from the **AccountsComponent** which wants to load all the code from the **SetDetailsComponent** which wants to load all the code from the... you get the idea.
 
-Two items of code are refering to each other, hence the term circular reference.
+Two items of code are referring to each other, hence the term circular reference.
 
 ### Why did it occur
 
-This circular refernce was caused because we have been very messy with out code, in particular our navigating code. You might have already noticed that we haven't been too strigent in applying the DRY principle, for example:
+This circular reference was caused because we have been very messy with out code, in particular our navigating code. You might have already noticed that we haven't been too stringent in applying the DRY principle, for example:
 
 - we have navigation code in the **MainForm**, the **SetDetailsComponent** and the **AccountComponent**
-- we also have repeition of simliar code in each of the **link click handlers** in the **MainCode**
+- we also have repetition of similar code in each of the **link click handlers** in the **MainCode**
 
 ### How to resolve it
 

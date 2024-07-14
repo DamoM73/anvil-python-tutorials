@@ -1,7 +1,10 @@
 # Create new app
 
 ```{topic} In this tutorial you will:
-- Learn how to create a new app in Anvil
+- Create a new app by logging into Anvil and starting a new project.
+- Choosing a theme between Material Design and Material Design 3.
+- Change the app’s name and logo.
+- Select a colour scheme by using pre-set options or custom HTML color codes.
 ```
 
 Now that we have planned our app, it is time to create. First you need to log into **<a href="https://anvil.works/build" target="_blank">Anvil</a>**.
@@ -12,7 +15,7 @@ You will be presented with a choice between **Create a new app** and **...or sta
 
 ## Choose Theme
 
-You will then be asked to choose a theme. These tutorials will be using Material Design, but you can use Material Design 3 since they are structurally rthe same. Check the exmaples below to decide (don't worry about the colours, you can change them latter).
+You will then be asked to choose a theme. These tutorials will be using Material Design, but you can use Material Design 3 since they are structurally the same. Check the examples below to decide (don't worry about the colours, you can change them latter).
 
 ![step 2](./assets/img/04/step_02.png)
 
@@ -56,10 +59,10 @@ Then choose **Colour Scheme**
 
 ![step 7](./assets/img/04/step_07.png)
 
-The options avaiable to your will depend if you have chosen **Material Design** or **Material Design 3**. Eitheway, you will be able to:
+The options available to your will depend if you have chosen **Material Design** or **Material Design 3**. Either way, you will be able to:
 
-1. Choose from some preset options
-2. Edit the individual **<a href="https://htmlcolorcodes.com/" target="_blank">HTML color codes</a>** for different parts of your theme.
+1. Choose from some pre-set options
+2. Edit the individual **<a href="https://htmlcolorcodes.com/" target="_blank">HTML colour codes</a>** for different parts of your theme.
 
 ![step 8](./assets/img/04/step_08.png)
 

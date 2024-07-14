@@ -1,7 +1,10 @@
 # Switch Component Method
 
 ```{topic} In this tutorial you will:
-- refactor the navigation code by consolidating it into the **MainForm**
+- Understanding the importance of refactoring for code maintainability.
+- Creating a centralized navigation method (switch_component).
+- Replacing distributed navigation code with calls to the new method.
+- Ensuring that the refactored code functions correctly.
 ```
 
 Last tutorial we encountered a problem that was caused by having our navigation code distributed throughout our codebase. This tutorial we will refactor the code so all this navigation code resides in the **MainForm**.
@@ -92,7 +95,7 @@ At the moment, the code just loads the **HomeComponent**. We want to change it s
 
 Let's consider each line of code:
 
-- **line 27** &rarr; it is generatic, so there is no need to change it
+- **line 27** &rarr; it is generic, so there is no need to change it
 - **line 28** &rarr; we want to change the component loaded, so lets change `HomeComponent()` to a variable called `cmpt`. This variable can be set to the appropriate component before this line is called
 - **line 29** &rarr; similarly, we want to change the bread_crumb according to the `state`, so let's replace `self.breadcrumb_stem` with a variable called `breadcrumb`
 - **line 30** &rarr; we want to call `set_active_link` with the `state`, so replace `home` with `state`.
@@ -149,7 +152,7 @@ So let's put this into an `if ... elif` statement in our code
     self.set_active_link(state)
 ```
 
-Now we need to set the value of `breadcrum` according to `state`. We can incorporate the breadcrum values from the old navigation into our `if ... elif` statement.
+Now we need to set the value of `breadcrum` according to `state`. We can incorporate the breadcrumb values from the old navigation into our `if ... elif` statement.
 
 ```{code-block} python
 :linenos:
@@ -184,12 +187,12 @@ Now we need to set the value of `breadcrum` according to `state`. We can incorpo
 
 Now that we have create the `switch_component` method, we need to go through our codebase and replace all the navigation code with calls the the `switch_component` method.
 
-The best way to find the naviagtion code is to do a search for the `add_component` method.
+The best way to find the navigation code is to do a search for the `add_component` method.
 
 1. click on the search icon
 2. type `add_component` into the search box
 
-![serach](./assets/img/19/search.png)
+![search](./assets/img/19/search.png)
 
 #### MainForm
 
@@ -324,7 +327,7 @@ After all those changes in MainForm, the only use of `add_component` should be i
 
 #### SetDetailsComponent
 
-Next we will change the **SetDetailsComponet**, so open it in code mode.
+Next we will change the **SetDetailsComponent**, so open it in code mode.
 
 Below is the old navigation code. Remember **line 35** provides access to all methods in the **MainForm**.  **switch_component** is on the **MainForm**, so we need to keep this line so we can access the method.
 

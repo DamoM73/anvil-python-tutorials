@@ -1,16 +1,18 @@
 # How websites work
 
 ```{topic} In this tutorial you will:
-- Learn how your computer accesses websites
+- Understand how computers access websites.
+- Learn the difference between frontend (client-side) and backend (server-side) processes.
+- Grasp the concept of data flow in web applications.
 ```
 
 ## There is no cloud
 
-We have all heard about 'The Cloud' as a term that refers to where files are located that aren't on your device. It often seems like our computers are connected to some amorphous entity wich magically stores and provide information.
+We have all heard about 'The Cloud' as a term that refers to where files are located that aren't on your device. It often seems like our computers are connected to some amorphous entity which magically stores and provide information.
 
 ![cloud computer](./assets/img/02/cloud_computing.png)
 
-As is often the case, this is a over-simplifaction for marketing purposes. It allows non-technical people to comprehend concepts enough to use them. In order to create websites, we need a much more technical understanding how the web works. 
+As is often the case, this is a over-simplification for marketing purposes. It allows non-technical people to comprehend concepts enough to use them. In order to create websites, we need a much more technical understanding how the web works. 
 
 ## Frontend and Backend
 

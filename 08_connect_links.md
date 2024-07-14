@@ -1,8 +1,8 @@
 # Connecting links
 
 ```{topic} In this tutorial you will:
-- Learn how to create event handlers for links click events
-- Learn how to load the dynamically loaded components into the MainForm
+- Create event handlers for link click events.
+- Load dynamically created components into the MainForm.
 ```
 
 We now need to connect the links on our MainForm to the components we just created. The will use code to make these connections. We need create a handler for each link that loads it's respective component.
@@ -12,14 +12,14 @@ We now need to connect the links on our MainForm to the components we just creat
 Event-driven programming is where a computer program runs based on specific actions (clicks, key presses, or messages from other programs). The program reacts to these events as they happen. The code that detects the event is said to **listen** for the event, then it calls a **handler** to react to the event.
 ```
 
-To simplfy the process, we are only going to connect four of the components:
+To simplify the process, we are only going to connect four of the components:
 
 - HomeComponent
 - CalendarComponent
 - AddComponent
 - AccountComponent
 
-We will work throught connecting the HomeComponent link, then you can repeat the steps for the other three links.
+We will work through connecting the HomeComponent link, then you can repeat the steps for the other three links.
 
 ## Connecting HomeComponent
 

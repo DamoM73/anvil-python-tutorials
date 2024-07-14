@@ -1,14 +1,18 @@
-# Account Links Visability
+# Account Links Visibility
 
 ```{topic} In this tutorial you will:
-- Dynamically change elements' visibility according to the user logged in status
+- Understand how to use the visibility property of layout elements.
+- Use the `anvil.users.get_user()` function to check user login status.
+- Implement Python truthiness to set link visibility.
+- Modify the set_active_link method to dynamically adjust link visibility.
+- Redirect users to the Home page after login, registration, or logout actions.
 ```
 
-Currently we have four links associated with accounts (Register, Login, Account, Logout), but the relevence of these links depend on whether the user is logged in or not. If the user is logged in, they don't need the login or register link, and, similarily account and logout are not needed if the user is not logged in. So we should adjust the MainForm to not display irrelevent links. How will we do this?
+Currently we have four links associated with accounts (Register, Login, Account, Logout), but the relevance of these links depend on whether the user is logged in or not. If the user is logged in, they don't need the login or register link, and, similarly, account and logout are not needed if the user is not logged in. So we should adjust the MainForm to not display irrelevant links. How will we do this?
 
 ## Planning
 
-Fortunately each layout element has a visability property, so we can simply set this to `True` or `False` depending on the logged in status of the user.
+Fortunately each layout element has a visibility property, so we can simply set this to `True` or `False` depending on the logged in status of the user.
 
 In testing the last tutorial we used code the `anvil.users.get_user()` to show who the current logged in user was. If there was a user it returned `<LiveObject>: anvil.table.Row`, if there wasn't a user it returned `None`. According to Python **truthiness**, any object is has a Boolean value or `True`, while `None` has a Boolean value of `False`.
 
@@ -28,28 +32,28 @@ In Python, "truthiness" refers to how values are evaluated in a boolean context,
 | Objects by default | Special Objects that explicitly return `False` |
 ```
 
-We will use Python truthiness, get_user() and the links visablity to dynamically adjust the account links in respect to the users authentication.
+We will use Python truthiness, get_user() and the links visibility to dynamically adjust the account links in respect to the users authentication.
 
 We want to map it this way:
 
-| `get_user()` | Register visability | Login visability | Account visability | Logout visability |
+| `get_user()` | Register visibility | Login visibility | Account visibility | Logout visibility |
 | :--- | :--- | :--- | :--- | :--- |
 | `True` | `False` | `False` | `True` | `True` |
 | `False` | `True` | `True` | `False` | `False` |
 
 If you look at the table above you can see that the truthiness of:
 
-- Register visability is the opposite of `get_user()`
-- Login visability is the opposite of `get_user()`
-- Account visability is the same as `get_user()`
-- Logout visability is the same as `get_user()`
+- Register visibility is the opposite of `get_user()`
+- Login visibility is the opposite of `get_user()`
+- Account visibility is the same as `get_user()`
+- Logout visibility is the same as `get_user()`
 
 There the visiblity of the links can be rewritten as a function of the truthiness of `get_user()`.
 
-- Register visability = `not get_user()`
-- Login visability = `not get_user()`
-- Account visability = `get_user()`
-- Logout visability = `get_user()`
+- Register visibility = `not get_user()`
+- Login visibility = `not get_user()`
+- Account visibility = `get_user()`
+- Logout visibility = `get_user()`
 
 Where should we place our code? It would be effective if the test is done each time the page changes. We just made a function `set_active_link` which we call each time a link is clicked, so we should put it there.
 
@@ -57,7 +61,7 @@ Where should we place our code? It would be effective if the test is done each t
 
 Open the **MainForm** in code mode and go to the `set_active_link` method.
 
-Then you want to enact our plan above by writting the highlighted code at the bottom of the `set_active_link` method.
+Then you want to enact our plan above by writing the highlighted code at the bottom of the `set_active_link` method.
 
 ```{code-block} python
 :linenos:
@@ -160,7 +164,7 @@ Since there is no user logged in you should see the **Register** and **Login** l
 
 ### Login
 
-Finally click the **Login** button and use the user credintials you just registered.
+Finally click the **Login** button and use the user credentials you just registered.
 
 Since there is a user logged in again, you should see the **Account** and **Logout** links.
 

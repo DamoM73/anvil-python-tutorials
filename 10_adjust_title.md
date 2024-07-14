@@ -1,7 +1,11 @@
 # Adjust Page Title
 
 ```{topic} In this tutorial you will:
-- Learn how to dynamically interact with the layout components
+- Understand the concept of breadcrumbs in web design.
+- Implement a single point of truth for breadcrumb text.
+- Modify the MainForm title based on the active component.
+- Use event handlers to update the title dynamically when links are clicked.
+- Test the changes to ensure proper functionality.
 ```
 
 In this tutorial we are going to change the MainForm title into a **breadcrumb**.
@@ -13,7 +17,7 @@ Breadcrumbs are a web design elements used for navigation. They typically displa
 
 ## Planning
 
-To acheive this, we want the MainForm title to display the following text for each component (at this stage we will only focus on the compontents we have linked):
+To achieve this, we want the MainForm title to display the following text for each component (at this stage we will only focus on the components we have linked):
 
 - HomeComponent &rarr; **StudyM8**
 - CalendarComponent &rarr; **StudyM8 - Calendar**

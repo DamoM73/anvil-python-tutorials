@@ -7,9 +7,9 @@
 
 Almost time to start making our website, but before we do, there is one last concept we need to understand.
 
-Looking at our **[wireframes](./03_studyM8_design.md)** you will notice that they all look very similar. The top bar, and the side menu all look the same, it is only the main content in the grey centre panel that changes. As the user navigatges from one page to another, we could just send the entire page's data each time, but this is extremely inefficient.
+Looking at our **[wireframes](./03_studyM8_design.md)** you will notice that they all look very similar. The top bar, and the side menu all look the same, it is only the main content in the grey centre panel that changes. As the user navigates from one page to another, we could just send the entire page's data each time, but this is extremely inefficient.
 
-In our frontend backend diagram, it is the communitication over the internet between frontend and backend (the lightening bolt) that is the slowest.
+In our frontend backend diagram, it is the communication over the internet between frontend and backend (the lightening bolt) that is the slowest.
 
 ![frontend backend](./assets/img/02/frontend_backend.png)
 
@@ -19,7 +19,7 @@ This means it is faster to minimise the amount of data being transferred. When c
 
 A Single-Page Application doesn't reload every time the user navigates to a new page, but rather, it only loads the parts of the website that change. This approach results in a smoother, faster user experience similar to that of a desktop application.
 
-How does it work? Intially a **main form** is loaded containing the content that remains constant. Then  different components or views are swapped in and out based on user interactions, this is called **dynamic loading**.
+How does it work? Initially a **main form** is loaded containing the content that remains constant. Then  different components or views are swapped in and out based on user interactions, this is called **dynamic loading**.
 
 In our design our main form would look something like this:
 
@@ -29,7 +29,7 @@ The parts that get dynamically loaded are called **components**, but we'll deal 
 
 ## The MainForm
 
-Anvil already has the start of your MainForm openned for you. If you cannot see it go:
+Anvil already has the start of your MainForm opened for you. If you cannot see it go:
 
 - **Files** in the side menu
 - **Form1** in the submenu
@@ -38,7 +38,7 @@ Anvil already has the start of your MainForm openned for you. If you cannot see 
 
 ### Rename Form1
 
-Form1 is a poor name for this file. So we will remane it to `MainForm` (check your spelling and capitalisation).
+Form1 is a poor name for this file. So we will rename it to `MainForm` (check your spelling and capitalisation).
 
 ```{admonition} Naming Conventions
 :class: note
@@ -49,7 +49,7 @@ Naming conventions include information that makes it easier to remember what the
 It seems like extra work, but it makes things easier by reducing your coignative load.
 ```
 
-Click in the **elipses** (three dots) then **rename**. Type `MainForm` then press enter.
+Click in the **ellipses** (three dots) then **rename**. Type `MainForm` then press enter.
 
 ![rename](./assets/img/06/rename.png)
 

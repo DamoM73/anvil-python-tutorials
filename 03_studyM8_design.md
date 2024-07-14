@@ -1,14 +1,16 @@
 # StudyM8 design
 
 ```{topic} In this tutorial you will:
-- Learn how to plan a website
+- Understand website planning principles.
+- Create a site map to visualize the structure and links between pages.
+- Develop wireframes to design the layout and structure without detailed design elements.
 ```
 
 Before we start creating our website, we need to plan what it will look like. You have already had a chance to use the finished app, but you will not normally have this opportunity. Therefore, it is best to start with an understanding of the different pages that your website is comprised of, how they fit together and what they will look like.
 
 ## Site Map
 
-The first step is to identify all the webpages your site cotnains, and how they fit together. We show this using a site map. A site map is a simple diagram that shows all the pages and the links between them.
+The first step is to identify all the webpages your site contains, and how they fit together. We show this using a site map. A site map is a simple diagram that shows all the pages and the links between them.
 
 Here is the sitemap for our StudyM8 app.
 
@@ -28,7 +30,7 @@ Below are the wireframes for StudyM8. They follow web design principles called M
 
 ### Welcome Page
 
-The welcome page is the landing page for the website. This is where uses first arrive and the only page that can be accessed without a user account. It will be used to explaing the app and encourage the user to register for an account.
+The welcome page is the landing page for the website. This is where uses first arrive and the only page that can be accessed without a user account. It will be used to explaining the app and encourage the user to register for an account.
 
 ![Welcome Page](./assets/img/03/wireframe_welcome.png)
 
@@ -37,7 +39,7 @@ Notice the Material Design features:
 - the menu bar across the top of the page, with links on the right-hand side
 - the hamburger icon (three horizontal lines) in the top left corner that will open and close the left panel menu
 - the left panel menu with links to the different web pages
-- the content is containted in cards (the white and grey boxes). Not only does this groups information for the user, but it also is a useful organising tool for the frontend
+- the content is contained in cards (the white and grey boxes). Not only does this groups information for the user, but it also is a useful organising tool for the frontend
 
 ```{admonition} Lorem Ipsum
 :class: note
@@ -61,13 +63,13 @@ Things to note:
 
 ### Edit Page
 
-The edit page is a variation of the home page in whicht the user can an assessment's details. When the user clicks an assessment's edit button, the card for that assessment changes
+The edit page is a variation of the home page in which the user can an assessment's details. When the user clicks an assessment's edit button, the card for that assessment changes
 
 ![Edit Page](./assets/img/03/wireframe_home_edit.png)
 
 Things to note:
 
-- both the start date and the due date are edited using a date picker component. Since dates are written differenty in different countries, date pickers prevent users from entering the date incorrectly.
+- both the start date and the due date are edited using a date picker component. Since dates are written differently in different countries, date pickers prevent users from entering the date incorrectly.
 
 ### Calendar Page
 

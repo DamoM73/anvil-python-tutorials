@@ -1,7 +1,11 @@
 # SetDetailsComponent Navigation
 
 ```{topic} In this tutorial you will:
-- Redirect to the Account screen after saving the user's first name and last name
+- Redirect users to a different screen after data is saved.
+- Implement code reuse by copying and adapting existing code.
+- Debug common runtime and logical errors in a web app.
+- Use Anvil commands like `anvil.get_open_form()` for form references.
+- Properly import components to ensure code functionality.
 ```
 
 In last tutorial's test you would notice that once you have saved the details, the **SetDetailsComponent** remained loaded. What we want to do is load the **AccountComponent** so the user can see the current value of their first name and last name.
@@ -10,7 +14,7 @@ Admittedly, at the moment, the **AccountComponent** only has a title, but we'll 
 
 ## Plan
 
-The idea is pretty simple, we will need to add the step of loading the **AccountComponent** and change the **lable_title_text** to the end of the **button_save_click** handler. We can copy the approriate code from **link_account_click** handler in the **MainForm**.
+The idea is pretty simple, we will need to add the step of loading the **AccountComponent** and change the **lable_title_text** to the end of the **button_save_click** handler. We can copy the appropriate code from **link_account_click** handler in the **MainForm**.
 
 ## Code
 
@@ -100,7 +104,7 @@ Programming errors fall into three categories
 
 #### AttributeError analysis
 
-Well if says the error occured at **line 34** so lets start there:
+Well if says the error occurred at **line 34** so lets start there:
 
 `self.content_panel.clear()` &rarr; clear content_panel in self (this component).
 
@@ -171,7 +175,7 @@ So we need to add this to the import statement at the top of **SetDetailsCompone
 
 #### Importing AccountComponent
 
-Open the **SetDetailsComponent** in code mode an then add the lightlighted code below:
+Open the **SetDetailsComponent** in code mode an then add the highlighted code below:
 
 ```{code-block} python
 :linenos:

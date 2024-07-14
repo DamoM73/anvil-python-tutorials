@@ -1,7 +1,10 @@
 # Complete Account Component
 
 ```{topic} In this tutorial you will:
-- Finalise entering into the **SetDetailsComponent** from the **AccountComponent**
+- Automatically fill in First Name and Last Name fields for existing users.
+- Implement code to fetch and display user details upon loading the component.
+- Validate that the changes display correctly and can be edited and saved.
+- Ensure proper integration and testing of the final component.
 ```
 
 Now that we have added the **switch_component** method, we have almost finished the **AccountComponent** code. If you recall your test, there was one annoying problem. When the **SetDetailsComponent** loaded, the First name and Last name text boxes were empty. Now this is fine when you are registering new users, but it is annoying when coming from the **AccountComponent**. 

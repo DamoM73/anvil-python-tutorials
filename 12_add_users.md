@@ -1,12 +1,13 @@
 # Adding Users
 
 ```{topic} In this tutorial you will:
-- Learn to 
+- Set up user management
+- Add custom user fields
 ```
 
 Anvil provides a range of useful features. One of these features is user management. The user management tool  simplifies the process of handling user signups, logins, and permissions within an Anvil application. It provides built-in functions to manage user authentication and maintain user data securely.
 
-In this tutorial we will set up the user management system. In the next tutorial we will incorporate it's feautres into our website.
+In this tutorial we will set up the user management system. In the next tutorial we will incorporate it's features into our website.
 
 ## Setting up user management
 
@@ -26,8 +27,8 @@ On the Users page:
 
 1. Select the checkbox for **Remember login between sessions** &rarr; will save you login in every time you launch your website.
    - the default 30 days will be fine.
-2. Select the checkbox for **Allow visitors to sign up** &rarr; will allow you to use the registeration system.
-3. Deselect the checkbox for **Confirm email address before users can log in** &rarr; will allow yo to use bogus emails for develpoment.
+2. Select the checkbox for **Allow visitors to sign up** &rarr; will allow you to use the registration system.
+3. Deselect the checkbox for **Confirm email address before users can log in** &rarr; will allow you to use bogus emails for development.
 
 ![user settings](./assets/img/12/user_settings.png)
 

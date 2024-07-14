@@ -1,12 +1,16 @@
 # User Server Module
 
 ```{topic} In this tutorial you will:
-- Create code that access the backend database
+- Learn to create, read, update, and delete database records.
+- Write server-side Python code to handle database interactions.
+- Use the `@anvil.server.callable` decorator to allow client-side code to call server functions.
+- Create a function to update user details and call it from the client-side interface.
+- Test the implementation to ensure correct functionality.
 ```
 
 ## Backend databases
 
-The **User table** that we have been dealing with is actually insdie a database. At the moment the database has only one table, but eventually we will add extra tables to it. There are four basic operations that databases need to do - create, read, update and delete, refered to as CRUD. We have already been using a read operation, the built in `get_user()`.
+The **User table** that we have been dealing with is actually inside a database. At the moment the database has only one table, but eventually we will add extra tables to it. There are four basic operations that databases need to do - create, read, update and delete, referred to as CRUD. We have already been using a read operation, the built in `get_user()`.
 
 ```{admonition} CRUD
 :class: note
@@ -88,7 +92,7 @@ def update_user(first_name, last_name):
 
 ### Call the update user function
 
-Now that we have the a server-sdie function we need to call it, so return to the code of **SetDetailsComponent**.
+Now that we have the a server-side function we need to call it, so return to the code of **SetDetailsComponent**.
 
 Replace line 30 with the highlighted text.
 

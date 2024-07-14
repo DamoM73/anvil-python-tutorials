@@ -1,7 +1,10 @@
 # AccountComponent Layout
 
 ```{topic} In this tutorial you will:
-- Create the layout for the AccountComponent
+- Add a Card element to the layout.
+- Insert a Column Panel inside the Card.
+- Creat labels for displaying the user's first and last names.
+- Add an Edit button to allow users to update their details.
 ```
 
 Last tutorial we noted that we need to populate the **AccountComponent**. We will do this over two tutorials. This one will focus on creating the layout, while the next tutorial will address the code.
@@ -32,7 +35,7 @@ Then we need to add a **Column Panel** inside the **Card**
 
 Now we need to add the first name label. 
 
-- This is the one that says **First Name** which the code wil not interact with, so no need to change its name.
+- This is the one that says **First Name** which the code will not interact with, so no need to change its name.
 - We will still set the role to **input-prompt** so we can keep the text formatting consistent between the **AccountComponent** and the **SetDetailsComponent**.
 
 ![first name label](./assets/img/18/first_name_label.gif)

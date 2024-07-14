@@ -1,7 +1,10 @@
 # Set the Initial Component
 
 ```{topic} In this tutorial you will:
-- Learn how to run code when forms are loaded
+- Understand where to place code that runs before the form opens.
+- Learn how to add code to __init__ to load HomeComponent immediately.
+- Verify that HomeComponent appears on startup.
+- Identify and fix issues like incorrect indentation causing NameError.
 ```
 
 When you tested your website in the last tutorial, did you notice that, at first, there was no component loaded on the MainForm. This isn't a good look. So, in this tutorial, we will make the **MainForm** automatically load the **HomeComponent** as soon as it starts.
@@ -36,7 +39,7 @@ So what code do we need to add? Well, you have already written code that loads t
     self.content_panel.add_component(HomeComponent())
 ```
 
-So it would make sense to simply copy that line and paste it under line 14. So the `__init__` will now lokk like:
+So it would make sense to simply copy that line and paste it under line 14. So the `__init__` will now look like:
 
 ```{code-block} python
 :linenos:

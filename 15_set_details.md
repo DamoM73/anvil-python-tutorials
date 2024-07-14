@@ -1,14 +1,23 @@
 # SetDetailsComponent Design
 
 ```{topic} In this tutorial you will:
-- Learn how to add layout elements to a component
+- Add layout elements to a component.
+- Design the SetDetailsComponent for user details input.
+- Create event handlers for saving user data.
+- Validate user input to ensure data integrity.
+- Add icons to titles.
+- Use cards for grouping related information.
+- Organize labels and textboxes with a column panel.
+- Implement text boxes for first and last names.
+- Display error messages for invalid inputs.
+- Add a save button to submit user details.
 ```
 
 If you look at the **user table**, you will notice that our registered users are missing their first and last names. In this tutorial we will fix this issue.
 
 ## Planning
 
-If yo urefer back to our **[design](./03_studyM8_design.md)** you will notice that we have a **SetDetailsComponent** which has a space for the user names.
+If you refer back to our **[design](./03_studyM8_design.md)** you will notice that we have a **SetDetailsComponent** which has a space for the user names.
 
 ![SetDetailsComponent](./assets/img/03/wireframe_set_details.png)
 
@@ -33,7 +42,7 @@ This is quite a bit, so we'll split it over the next three tutorials.
 
 1. Deals with the layout of the **SetDetailsComponent**
 2. Coding the **SetDetailsComponent**
-3. Addresses writting the information to the **user table**
+3. Addresses writing the information to the **user table**
 
 ## Designing
 
@@ -77,7 +86,7 @@ In order to organise our labels and textboxes, we need to use a layout element c
 
 ### Add First name elements
 
-Now we can start adding the First name elements. We'll start with the lable.
+Now we can start adding the First name elements. We'll start with the label.
 
 1. In the **Add Component** panel, find and click **Label**
 2. Click inside the **Card** in layout (make sure you have the blue line inside the card)
@@ -103,7 +112,7 @@ Textbox placeholders are text displayed inside input fields on forms to give use
 
 ### Add Last name elements
 
-Now to add the Last name lable.
+Now to add the Last name label.
 
 1. Click **Label** in the **Add Component** panel
 2. Click inside the **Card**, making sure that your blue line is directly under the the First name label
@@ -120,7 +129,7 @@ Then the Last name text box, which is virtually the same the the First name text
 3. Change the name of the text box to `text_box_last_name`
 4. Find the **placeholder** property and add `Enter last name`
 
-![last nanme text box](./assets/img/15/last_name_text_box.gif)
+![last name text box](./assets/img/15/last_name_text_box.gif)
 
 ### Error Message
 

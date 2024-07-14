@@ -1,14 +1,18 @@
 # Show Active Link
 
 ```{topic} In this tutorial you will:
-- Learning how to dymnaically change the role of layout components
+- Understand how to change a link's role to indicate it is selected.
+- Apply roles using CSS classes for custom styling.
+- Implement state machines to manage component states.
+- Write efficient, non-repetitive code using the DRY principle.
+- Test links to ensure proper highlighting based on component load states.
 ```
 
 In Material Design, we show active links to enhance the user experience and navigation. Highlighting active links provides users with a visual feedback indicating their current location within the website or application, offering a sense of context and orientation. Our website does not use active links, an issue that we will address in this tutorial.
 
 ## Changing link's roles
 
-In Anvil, links can have a **selected role**. This changes the formatting of the link to differentiate it from non-selected links. It is the fomatting that is uses when the mouse cursor moves over a link.
+In Anvil, links can have a **selected role**. This changes the formatting of the link to differentiate it from non-selected links. It is the formatting that is uses when the mouse cursor moves over a link.
 
 ![selected links](./assets/img/11/selected_links.gif)
 

@@ -1,7 +1,9 @@
 # Adding Components
 
 ```{topic} In this tutorial you will:
-- Learn how to create the dynamically loaded components of a Single-Page Application
+- Understand how to create dynamically loaded components in a Single-Page Application.
+- Create six components: WelcomeComponent, HomeComponent, CalendarComponent, AddComponent, AccountComponent, and SetDetailsComponent.
+- Learn the process of adding a new form and setting titles for each component to distinguish them.
 ```
 
 We now need to create all the components that will be dynamically loaded into the MainForm. Looking at our **[design](./03_studyM8_design.md)**, although we have seven pages, we only need six components, since the Edit Page is just a modified Home Page.
@@ -23,7 +25,7 @@ First we'll work through creating the **WelcomeComponent**, then you can use the
 
 First your will need to add a new form to the website. To do this:
 
-1. In the File submenu, click on the **Client Code** elipses
+1. In the File submenu, click on the **Client Code** ellipses
 2. Choose **Add form**
 3. Choose **Blank Panel**
 4. Rename the form to **WelcomeComponent**
@@ -32,14 +34,14 @@ First your will need to add a new form to the website. To do this:
 
 ### Add a title
 
-We will gradually add the differnt elements to these components. In the meanwhile we will add a title to each component so we can distinguish between them.
+We will gradually add the different elements to these components. In the meanwhile we will add a title to each component so we can distinguish between them.
 
 To add a title:
 
 1. In the **Add Components** click on **Headline**
 2. Click at the top of the WelcomeComponent
 3. In **Properties** change the **Text** to `Welcome`
-4. Scroll down to **align** and choose **center**
+4. Scroll down to **align** and choose **centre**
 
 ![add title](./assets/img/07/add_title.gif)
 
