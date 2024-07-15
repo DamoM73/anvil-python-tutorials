@@ -1,7 +1,9 @@
 # The Assessments Table
 
 ```{topic} In this tutorial you will:
-- 
+- Create a new custom table
+- Add a column to link the custom table tot he user table
+- Add columns with various data types
 ```
 
 Now that we have the user all sorted, it is time to start working on the assessments aspect of the website. To do this we will need to store all the assessment details in a table. This information doesn't belong in the user table, so we will need to store it in a new table.
