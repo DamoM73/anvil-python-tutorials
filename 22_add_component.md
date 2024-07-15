@@ -1,7 +1,12 @@
 # Add Component Design
 
 ```{topic} In this tutorial you will:
-- 
+- Add an icon to the title.
+- Organise elements using a card and column panel.
+- Create labels and text boxes for subject and details.
+- Incorporate date pickers for start and due dates, ensuring correct format.
+- Include an label for validation error messages.
+- Add an "Add Assessment" button.
 ```
 
 Now that we have somewhere to store assessment data, we need a way to input it. This will be completed through the **AddComponent**.
