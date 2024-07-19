@@ -139,6 +139,27 @@ This could mean that you failed to import the component (in this example `Accoun
 
 This could mean that your missed the `()` after the component (in this example `AccountComponent`) in the `add_component` statement.
 
+### Click not working
+
+If you click on a link but the component does not load, check the following:
+
+#### Do your components have titles?
+
+If your components don't have headings, your code is probably working. You just can't see it because all your components look the same (ie. empty)
+
+![no title](./assets/img/08/error_no_title.gif)
+
+#### Are your links connected to their handler?
+
+The Layout links need to be connected to their event handler. If you missed the [Create handler](#create-handler) step, then they will not be connected. You can check by:
+
+1. Going into the Design mode
+2. Clicking on the link
+3. Look for **Events** in the **property panel**
+4. Ensuring the handler name is in the **click** box
+
+![not connected](./assets/img/08/error_create_event.gif)
+
 ## Final code state
 
 By the end of this tutorial your code should be as below:
