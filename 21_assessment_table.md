@@ -30,6 +30,11 @@ The first column is very important, as it will link the assessment item with the
 2. Choose **Single row from another table** from the **Column Type** dropdown
 3. Choose **Users** from the **Linked Table** dropdown
 
+```{admonition} Importance of the **user** column
+:class: note
+This web app can accomodate multiple users. Each user will be able to enter their own assessment details. Therefore, when the assessment details are saved, is it important to identify which user each assessment item belongs to. We use the **user** column to do this.
+```
+
 ![user column](./assets/img/21/user_column.png)
 
 ### Other Columns

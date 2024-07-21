@@ -1,7 +1,11 @@
 # Add Component Code
 
 ```{topic} In this tutorial you will:
-- 
+- Initialize variables in `__init__` method.
+- Implement validation in `button_add_click` event handler.
+- Display save messages and reset the form.
+- Refactor code to use methods for displaying error and save messages.
+- Clear form inputs after saving.
 ```
 
 Now that we have create the layout for the AddComponent, we need to write the code to run it. Eventually we want to save the details to a table, but we haven't made a table yet, so we will simply display the data as a save message
