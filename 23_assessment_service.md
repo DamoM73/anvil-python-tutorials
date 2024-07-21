@@ -1,7 +1,10 @@
 # Assessment Service Module
 
 ```{topic} In this tutorial you will:
-- 
+- Create a server module to handle assessment data.
+- Write a function to add assessment details to the database.
+- Modify the frontend to call the server function when adding an assessment.
+- Verify that the assessment data is correctly saved to the database.
 ```
 
 Now that we have the **AddComponent** set and the user can input their data, we can save that data to the **Assessments** table. Just like we used a **user_service** to interact with the **Users** table, we will create an **assessment_service** to interact with the **Assessments** table.
