@@ -1,4 +1,4 @@
-# User Home Component
+# HomeComponent Design
 
 ```{topic} In this tutorial you will:
 - 
@@ -21,26 +21,72 @@ To display the list we will use a layout element called a **Repeating Panel**. *
 
 ## Layout
 
+### Add repeating panel
+
 Open the **HomeComponent** in the **Design** mode.
 
 First step:
 
-- add the `fa:home` icon to the title
-- add a card under the title
+1. add the `fa:home` icon to the title
+2. add a card under the title
 
 ![adding card](./assets/img/25/card.gif)
 
+Next you need to:
 
+3. find and click on **Repeating Panel** in the **Layout Components**
+4. place it in the layout by clicking on the card (check the blue line)
+5. Anvil will automatically open the repeating panel, rename it **AssessmentPanel**
+6. return to the **HomeComponent** click on **repeating_panel_1** and change it's role to **card**
 
-## Code
+![repeating panel](./assets/img/25/repeating_panel.gif)
 
+### Repeating panel layout
 
-## Get Assessment Function
+Now we need to add elements to the **AssessmentPanel**, so open it in **Design** mode.
 
-## Repeating Panel
+1. find the **Column Panel** and add it to the **AssessmentPanel**
 
-### Add Panel
+![column panel](./assets/img/25/column_panel.gif)
 
-### Connect to item
+2. locate the **Check Box** and add it.
+3. rename the **self.check_box_1** to **self.check_box_completed**
+4. delete **text** leaving it blank
 
-### Fix Formatting
+![check box](./assets/img/25/check_box.gif)
+
+5. add a **label** beside the check box (watch the blue line)
+6. rename it as **label_subject**
+7. change the role to the format you desire
+8. find and check **bold**
+
+![subject label](./assets/img/25/subject_label.gif)
+
+9. add another label beside the **label_subject**
+10. rename the new label to **label_details**
+11. change the role to be the same as **label_subject**
+
+![details label](./assets/img/25/label_details.gif)
+
+12. add a date picker beside **label_details**
+13. rename it **date_picker_start**
+
+![date start](./assets/img/25/date_start.gif)
+
+14. add a label beside **date_picker_start**
+15. change the **text** to `to`
+16. choose the same role as **label_subject**
+
+![to label](./assets/img/25/label_to.gif)
+
+17. add another date picker beside the **to**
+18. rename it **date_picker_due**
+
+![due date](./assets/img/25/date_due.gif)
+
+19. click on the **column panel**
+20. using the blue lines, change the column widths to best suit your content
+
+![resize](./assets/img/25/resize.gif)
+
+We have now finished the layout, time to turn towards the code.
