@@ -1,7 +1,8 @@
 # HomeComponent Design
 
 ```{topic} In this tutorial you will:
-- 
+- Use a Repeating Panel to display the list dynamically.
+- Add and configure components within the Repeating Panel, such as checkboxes, labels, and date pickers, to display assessment details appropriately.
 ```
 
 Now we can turn to the **HomeComponent**. This component lists all the current assessments and their respective details. Lets plan this out
