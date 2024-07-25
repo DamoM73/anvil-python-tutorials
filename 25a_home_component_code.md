@@ -1,7 +1,10 @@
 # HomeComponent Code
 
 ```{topic} In this tutorial you will:
-- 
+- Retrieve and sort assessments from the database using **assessment_services**.
+- Link assessment data to the **HomeComponent**'s repeating panel.
+- Format and display assessment details in the **AssessmentPanel**.
+- Test the functionality by viewing assessments on the Home page.
 ```
 
 ## Assessments service
