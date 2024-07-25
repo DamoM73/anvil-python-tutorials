@@ -4,6 +4,6 @@
 - 
 ```
 
-## Planning
+## Assessments Service
 
-Repeating panels work by being connected to a list of values
+We noted last tutorial that the repeating panel needs to be linked to a list of items.
