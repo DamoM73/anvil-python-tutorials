@@ -69,24 +69,26 @@ Now we need to add elements to the **AssessmentPanel**, so open it in **Design**
 
 ![details label](./assets/img/25/label_details.gif)
 
-12. add a date picker beside **label_details**
-13. rename it **date_picker_start**
+12. add another label beside **label_details**
+13. rename it **label_start**
+14. change the role to be the same as **label_subject**
 
 ![date start](./assets/img/25/date_start.gif)
 
-14. add a label beside **date_picker_start**
-15. change the **text** to `to`
-16. choose the same role as **label_subject**
+15. add a label beside **date_picker_start**
+16. change the **text** to `to`
+17. choose the same role as **label_subject**
 
 ![to label](./assets/img/25/label_to.gif)
 
-17. add another date picker beside the **to**
-18. rename it **date_picker_due**
+18. add another label beside **to**
+19. rename it **label_due**
+20. change the role to be the same as **label_subject**
 
 ![due date](./assets/img/25/date_due.gif)
 
-19. click on the **column panel**
-20. using the blue lines, change the column widths to best suit your content
+21. click on the **column panel**
+22. using the blue lines, change the column widths to best suit your content
 
 ![resize](./assets/img/25/resize.gif)
 

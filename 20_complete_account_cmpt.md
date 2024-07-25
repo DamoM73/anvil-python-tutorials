@@ -17,6 +17,8 @@ This tutorial will fix that problem.
 
 What were are planning to do is quite simple. If the user has name details, show these in the First name and Last name text boxes. This is going to be executed in the **SetDetailsComponent** code before the component is loaded.
 
+## Code
+
 Open the **SetDetailsComponent** in code mode, then add the highlighted code to `__init__`:
 
 ```{code-block} python
