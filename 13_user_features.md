@@ -108,11 +108,11 @@ It is really hard to test if our user features work, as we have no indication if
 
   def link_login_click(self, **event_args):
     anvil.users.login_with_form(allow_cancel=True)
-    print("Logout", anvil.users.get_user())
+    print("Login", anvil.users.get_user())
 
   def link_logout_click(self, **event_args):
     anvil.users.logout()
-    print("Login", anvil.users.get_user())
+    print("Logout", anvil.users.get_user())
 ```
 
 ```{admonition} Code explaination
