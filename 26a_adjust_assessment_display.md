@@ -1,7 +1,8 @@
 # Adjust Assessments Display
 
 ```{topic} In this tutorial you will:
-- 
+- Modify the **HomeComponent** to display only outstanding assessments.
+- Update the **get_assessment** function in **assessment_service** to filter out completed assessments.
 ```
 
 We can enter assessment details and we can view them. We even change the value of completed via a check box on the **AssessmentPanel**.

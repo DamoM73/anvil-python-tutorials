@@ -1,7 +1,9 @@
 # Complete Assessments
 
 ```{topic} In this tutorial you will:
-- 
+- Creating an event handler for checkbox changes.
+- Writing the **update_assessment_completed** function in the **assessment_service** to update the database.
+- Testing the implementation by verifying changes in the database.
 ```
 
 We can enter assessment details and we can view them. We even have a check box on the **AssessmentPanel** that allows the user to tick whether they have completed an assessment. Only problem is, this doesn't change the information saved in our **Assessment** table. let's fix that.
