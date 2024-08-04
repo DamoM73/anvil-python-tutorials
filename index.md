@@ -39,6 +39,7 @@ In these tutorials you will develop a study planner website using the Anvil plat
 26_complete_assessment
 26a_adjust_assessment_display
 27_edit_assessment
+27a_edit_assessment_code
 28_calendar_cmpt
 29_welcome
 30_optimisation
