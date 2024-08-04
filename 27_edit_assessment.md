@@ -1,4 +1,4 @@
-# Edit Assessments
+# Edit Assessments Layout
 
 ```{topic} In this tutorial you will:
 - 
@@ -30,7 +30,7 @@ Open the **AssessmentPanel** in **Design** mode, then:
 
 1. add a text box under **label_subject**
 2. rename it **text_box_subject**
-3. uncheck the **visible** tick
+3. uncheck the **visible** tick **(warning: in the gif, I missed the click)**
 
 ![subject text box](./assets/img/27/subject_text_box.gif)
 
@@ -67,26 +67,8 @@ Now we need to add the buttons to allow this switching.
 20. delete the **text** - the button is not big enough for text
 21. untick the **visible** check box
 22. change the **role** to your desired formatting
-17. change **icon** to `fa:save` - this icon is familiar enough that we don't need text to explain the purpose of the button. 
+23. change **icon** to `fa:save` - this icon is familiar enough that we don't need text to explain the purpose of the button. 
 
 ![save button](./assets/img/27/save_button.gif)
 
 That's the layout. Time for the code.
-
-## Code
-
-## Adjust visibility
-
-## Edit Button Actions
-
-### Populate components
-
-### Change Visibility
-
-## Save Button Actions
-
-### Update Assessment Function
-
-### Repopulate Display Components
-
-### Return Visibility
