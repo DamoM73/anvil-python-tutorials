@@ -1,7 +1,10 @@
 # Edit Assessments Layout
 
 ```{topic} In this tutorial you will:
-- 
+- Implement edit functionality in a web app component.
+- Utilize visibility settings to switch between modes.
+- Integrate UI elements for editing, such as text boxes and date pickers.
+- Configure UI components to enhance user interaction.
 ```
 
 The functionality of the website allows the user to add an assessment, and check an assessment off as being completed, but what if the details of the assessment changes. For example, what if the due date is changed? What the user needs is a way to edit the assessment details.

@@ -20,6 +20,8 @@ Open the **AssessmentPanel** in **Design** mode:
 
 ![event handlers](./assets/img/27/event_handlers.gif)
 
+## Code
+
 ### Button edit click
 
 When the user clicks the edit button, we want to web app to:
