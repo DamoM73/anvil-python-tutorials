@@ -1,7 +1,11 @@
 # Edit Assessments Code
 
 ```{topic} In this tutorial you will:
-- 
+- Implementing event handlers for edit and save buttons.
+- Transferring assessment details to edit fields and toggling element visibility.
+- Writing updates to a backend Assessments table.
+- Updating display elements after saving.
+- Testing the functionality to ensure correct behavior.
 ```
 
 ## Planning
