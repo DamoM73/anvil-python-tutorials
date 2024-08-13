@@ -36,7 +36,7 @@ It is important to note that clicking the **Edit Details** button will still cau
 
 ## Planning
 
-What we will do, is consolidate all the navigation code into one **MainForm** method called **switch_component**. Let's look at the current navigation code to establish what this method needs to do.
+What we will do, is consolidate all the navigation code into one **MainForm** method called **switch_component**. Let's look at the **MainForm** current navigation code to establish what this **switch_component** method needs to do.
 
 Below is the navigation code in the `link_home_click` handler, what can we identify?
 
@@ -51,16 +51,36 @@ Below is the navigation code in the `link_home_click` handler, what can we ident
     self.set_active_link("home")
 ```
 
-There are four parts to the navigation process:
+There are four highlighted lines indicate four steps to the navigation process:
 
-1. `self.content_panel.clear()` &rarr; remove the current component
-2. `self.content_panel.add_component(HomeComponent())` &rarr; add the desired component (in this case it is **HomeComponent**)
-3. `self.label_title.text = self.breadcrumb_stem` &rarr; set the correct breadcrumb title
-4. `self.set_active_link("home")` &rarr; set the correct active link
+1. **line 46** &rarr; removes the current component
+2. **line 47** &rarr; adds the desired component
+3. **line 48** &rarr; sets the correct breadcrumb title
+4. **line 49** &rarr; set the correct active link
 
-We need to move all four of these processes into our new **switch_component** method.
+We need to include all four of these processes into our new **switch_component** method.
 
-We can use the same mechanism as the **set_active_link** method to set the state of the **MainForm**. This means we will send a state to the **switch_component** (eg. `"home"`) and the **switch_component** method will respond to that state and make the appropriate changes.
+Remember in the **set_active_link** method, we passed a string to set the state of the **MainForm** (check below).
+
+```{code-block} python
+:linenos:
+:lineno-start: 24
+  def set_active_link(self, state):
+    if state == "home":
+      self.link_home.role = "selected"
+    else:
+      self.link_home.role = None
+    if state == "add":
+      self.link_add.role = "selected"
+    else:
+      self.link_add.role = None
+    if state == "calendar":
+      self.link_calendar.role = "selected"
+    else:
+      self.link_calendar.role = None
+```
+
+We can use this same concept to send a state to the **switch_component** (eg. `"home"`) and the **switch_component** method will respond to that state and load the **HomeComponent**
 
 Ok, now put that into practice.
 
@@ -68,7 +88,12 @@ Ok, now put that into practice.
 
 ### Create the switch_component
 
-Back in the **MainForm** code mode, create the new **switch_component** method above **set_active_link**. It will need to accept one argument called **state**.
+#### Copy code from home_link_code
+
+To implementing our plan:
+
+1. Open the **MainForm** code mode
+2. Create the new **switch_component** method above **set_active_link** - it will need to accept one argument called **state**.
 
 ```{code-block} python
 :linenos:
@@ -77,12 +102,37 @@ Back in the **MainForm** code mode, create the new **switch_component** method a
   def switch_component(self, state):
 ```
 
-Now copy the navigation code from the **link_home_click** method. This will be our execution part of the code (the code that makes the changes).
+3. Go to the **link_home_click** method
+4. Copy the code that is highlighted below
+
+```{code-block} python
+:linenos:
+:lineno-start: 50
+:emphasize-lines: 2 - 5
+  def link_calendar_click(self, **event_args):
+    self.content_panel.clear()
+    self.content_panel.add_component(CalendarComponent())
+    self.label_title.text = self.breadcrumb_stem + " - Calendar"
+    self.set_active_link("calendar")
+```
+
+5. Go back to the **switch_component** method.
+6. Add the highlighted structural comment
 
 ```{code-block} python
 :linenos:
 :lineno-start: 25
-:emphasize-lines: 2-6
+:emphasize-lines: 2
+  def switch_component(self, state):
+    # execution
+```
+
+7. Then paste the code you copied
+
+```{code-block} python
+:linenos:
+:lineno-start: 25
+:emphasize-lines: 3-6
   def switch_component(self, state):
     # execution
     self.content_panel.clear()
@@ -91,14 +141,27 @@ Now copy the navigation code from the **link_home_click** method. This will be o
     self.set_active_link("home")
 ```
 
+#### Make code generic
+
 At the moment, the code just loads the **HomeComponent**. We want to change it so that it response to the `state` that is passed to **switch_component**.
 
 Let's consider each line of code:
 
+```{code-block} python
+:linenos:
+:lineno-start: 25
+  def switch_component(self, state):
+    # execution
+    self.content_panel.clear()
+    self.content_panel.add_component(HomeComponent())
+    self.label_title.text = self.breadcrumb_stem
+    self.set_active_link("home")
+```
+
 - **line 27** &rarr; it is generic, so there is no need to change it
-- **line 28** &rarr; we want to change the component loaded, so lets change `HomeComponent()` to a variable called `cmpt`. This variable can be set to the appropriate component before this line is called
+- **line 28** &rarr; we want to change the component loaded, so lets change `HomeComponent()` to a variable called `cmpt`. This variable can be set to different components
 - **line 29** &rarr; similarly, we want to change the bread_crumb according to the `state`, so let's replace `self.breadcrumb_stem` with a variable called `breadcrumb`
-- **line 30** &rarr; we want to call `set_active_link` with the `state`, so replace `home` with `state`.
+- **line 30** &rarr; we want to call `set_active_link` with the `state` that is passed, so replace `home` with `state`.
 
 With these changes your code should look like:
 
@@ -114,50 +177,26 @@ With these changes your code should look like:
     self.set_active_link(state)
 ```
 
+#### Add response to state
+
 Now we just need to use `state` to establish the values of `cmpt` and `breadcrumb`.
 
 We will use an `if ... elif` statement to establish these values.
 
 There are five possible states for our app:
 
-- `"home"` &rarr; `cmpt = HomeComponent()`
-- `"add"` &rarr; `cmpt = AddComponent()`
-- `"account"` &rarr; `cmpt = Account()`
-- `"calendar`" &rarr; `cmpt = CalendarComponent()`
-- `"details"` &rarr; `cmpt = SetDetailsComponent()`
+- `"home"` &rarr; `cmpt = HomeComponent()` and `breadcrumb = self.breadcrumb_stem`
+- `"add"` &rarr; `cmpt = AddComponent()` and `breadcrumb = self.breadcrumb_stem + " - Account"`
+- `"account"` &rarr; `cmpt = Account()` and `breadcrumb = self.breadcrumb_stem + " - Add"`
+- `"calendar`" &rarr; `cmpt = CalendarComponent()` and `breadcrumb = self.breadcrumb_stem + " - Calendar"`
+- `"details"` &rarr; `cmpt = SetDetailsComponent()` and `breadcrumb = self.breadcrumb_stem + " - Account - Set Details"`
 
 So let's put this into an `if ... elif` statement in our code
 
 ```{code-block} python
 :linenos:
 :lineno-start: 25
-:emphasize-lines: 2-12
-  def switch_component(self, state):
-    # set state
-    if state == "home":
-      cmpt = HomeComponent()
-    elif state == "account":
-      cmpt = AccountComponent()
-    elif state == "add":
-      cmpt = AddComponent()
-    elif state == "calendar":
-      cmpt = CalendarComponent()
-    elif state == "details":
-      cmpt = SetDetailsComponent()
-    
-    # execution
-    self.content_panel.clear()
-    self.content_panel.add_component(cmpt)
-    self.label_title.text = breadcrumb
-    self.set_active_link(state)
-```
-
-Now we need to set the value of `breadcrum` according to `state`. We can incorporate the breadcrumb values from the old navigation into our `if ... elif` statement.
-
-```{code-block} python
-:linenos:
-:lineno-start: 25
-:emphasize-lines: 5, 8, 11, 14, 17
+:emphasize-lines: 2-17
   def switch_component(self, state):
     # set state
     if state == "home":
