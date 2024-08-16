@@ -1,7 +1,8 @@
-# Calendar Component
+# Calendar Component Layout
 
 ```{topic} In this tutorial you will:
-- 
+- Understanding how to integrate a Gantt chart into the web app.
+- Adding and configuring a Plot component in the CalendarComponentLayout.
 ```
 
 The calendar component of our web app is actually a specific chart called a Gantt chart. We are going to use the Anvil plotting mechanism to create it.
