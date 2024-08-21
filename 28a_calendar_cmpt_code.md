@@ -1,7 +1,11 @@
 # Calendar Component Code
 
 ```{topic} In this tutorial you will:
-- 
+- Retrieving and processing assessment data using Pandas.
+- Creating a timeline chart with Plotly.
+- Integrating the chart into an Anvil app.
+- Handling special cases, such as exams with identical start and due dates.-
+- Refining chart display by adjusting axes and labels.
 ```
 
 A note before we start. In this tutorial we will be using features of two libraries beyond the scope of course.
