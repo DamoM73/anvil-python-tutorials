@@ -1,7 +1,10 @@
 # Welcome Page
 
 ```{topic} In this tutorial you will:
-- 
+- Format a landing page using the WelcomeComponent.
+- Add and style text, images, and cards to the page.
+- Highlight key features of the web app with icons and descriptive text.
+- Create a call-to-action to encourage user registration.
 ```
 
 In this tutorial we will create a landing page for our web app, so that new users (who do not have an account) can see what the app is about.
