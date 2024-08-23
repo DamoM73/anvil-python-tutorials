@@ -6,7 +6,7 @@
 
 ## Create Data Access Module
 
-### Cahced User
+### Cached User
 
 ## Refactor Code
 

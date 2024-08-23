@@ -1,4 +1,4 @@
-# My Aseessments Function
+# My Assessments Function
 
 ```{topic} In this tutorial you will:
 - 
