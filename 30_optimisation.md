@@ -1,7 +1,10 @@
 # Optimisation
 
 ```{topic} In this tutorial you will:
-- 
+- Identify the role of frontend-backend communication and database access in slowing down the app.
+- Learn why you should minimize unnecessary database queries from the frontend.
+- Identify the reasons to optimize server-side code to reduce database calls.
+- Understand how caching (store frequently used data in variables) speeds up data retrieval
 ```
 
 We now have a functioning web app. Congratulations, at this point you have all the skills you need to create a website in Anvil. The rest of these tutorials are about improving the web app. In particular we are going to speed it up.
