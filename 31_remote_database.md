@@ -1,7 +1,10 @@
 # Reduce Remote Database Access
 
 ```{topic} In this tutorial you will:
-- 
+- Learn how to create a module in the frontend to store cached data, specifically user data, and ensure it's only accessed by that module using Python's private variables.
+- Learn to create a function that first checks if user data is cached; if not, it retrieves the data from the database and caches it for future use.
+- Learn to modify existing components (AccountComponent, AddComponent, CalendarComponent, SetDetailsComponent, MainForm) to use the cached user data instead of repeatedly querying the database.
+- Learn to test the web app to ensure the changes improve performance, and identify issues with logging out, updating user details, and page load speed.
 ```
 
 To implement caching in our web app we need to create a variables in the frontend to store our data variables. These data will need to be accessed by multiple frontend modules. Best practice for storing cached data is in it's own module. So that's what we will do.
