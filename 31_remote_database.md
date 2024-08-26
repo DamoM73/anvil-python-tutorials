@@ -728,6 +728,5 @@ class SetDetailsComponent(SetDetailsComponentTemplate):
                       self.text_box_last_name.text)
 
     main_form = get_open_form()
-    main_form.content_panel.clear()
     main_form.switch_component("account")
 ```
