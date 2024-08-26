@@ -1,7 +1,10 @@
 # Create Logout Function
 
 ```{topic} In this tutorial you will:
-- 
+- Understand the need to clear cached user data upon logout.
+- Implement a logout function in the data_access module to reset the cached user value and log out the user.
+- Modify the link_logout_click handler in the MainForm to use this logout function.
+- Test the functionality to ensure the user is properly redirected to the welcome page after logout.
 ```
 
 In testing your website in the last tutorial, you would have noticed that when you logout, the website is still acting like your are logged in. This is a problem.
