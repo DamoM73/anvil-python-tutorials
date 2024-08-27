@@ -48,6 +48,7 @@ In these tutorials you will develop a study planner website using the Anvil plat
 32_logout_func
 33_update_user_func
 34_my_assess_func
+34a_get_chart_func
 35_local_database
 98_resources
 99_topics
