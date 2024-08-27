@@ -1,7 +1,10 @@
 # Create Update User Function
 
 ```{topic} In this tutorial you will:
-- 
+- Understand a problem caused by cached user data.
+- Write a function to update user details and refresh the cache.
+- Modify the SetDetailsComponent to use the new function.
+- Test the functionality to ensure updates are reflected immediately.
 ```
 
 Another problem that was identified through testing, is an issue with the SetDetailsComponent. When a user changes their details, and saves, the AccountComponent continues to display their old details.
