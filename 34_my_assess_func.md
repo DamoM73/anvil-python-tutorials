@@ -1,7 +1,10 @@
 # My Assessments Function
 
 ```{topic} In this tutorial you will:
-- 
+- Implement a caching mechanism for assessment data in a web app.
+- Modify existing methods to use cached data to improve performance.
+- Test the caching mechanism to ensure the data is retrieved correctly.
+- Address issues with adding or updating assessments, ensuring the cache is refreshed appropriately.
 ```
 
 Now that we have cached the user data, our web app is fasters, but there are still some places where accessing the database slows it down.
