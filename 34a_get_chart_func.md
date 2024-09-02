@@ -1,7 +1,11 @@
 # Get Chart Function
 
 ```{topic} In this tutorial you will:
-- 
+- Understand how to cache data for efficient retrieval.
+- Create a private variable to store the chart.
+- Implement a method to check if the chart is cached and retrieve it if available, or regenerate it if not.
+- Modify the **CalendarComponent** to utilize the cached chart.
+- Test the implementation to ensure efficiency.
 ```
 
 The final frontend component that retrieves data from the backend is the **CalendarComponent**. In particular it retrieves the Gantt chart using the **get_chart** method.
