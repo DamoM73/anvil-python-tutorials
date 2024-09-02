@@ -1,7 +1,10 @@
 # Reduce Local Database Access
 
 ```{topic} In this tutorial you will:
--
+- Understand the speed differences in data retrieval (RAM vs. storage vs. internet).
+- Modify code to use cached data instead of repeatedly accessing the database.
+- Implement these optimizations in functions such as `add_assessment`, `get_assessment`, and `get_chart`.
+- Testing the changes to ensure improved performance.
 ```
 
 Remember when we discussed optimisation, we focused on preventing the frontend from unnecessarily retrieving data from the backend. This was a low-hanging fruit in improving our website speed, since the communication between the frontend and the backend is the slowest communication that occurs in our web app. 
