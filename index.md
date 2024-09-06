@@ -51,4 +51,5 @@ In these tutorials you will develop a study planner website using the Anvil plat
 35_local_database
 98_resources
 99_topics
+licencing
 ```
