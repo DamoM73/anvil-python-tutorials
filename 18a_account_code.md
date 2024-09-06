@@ -20,11 +20,13 @@ We also have create the code to load the **SetDetailsComponent**, so we just nee
 
 ## Code
 
-Open the **AccountComponent** in code mode.
-
 ### Display users details
 
-We want to load the first and last name before the form opens, so this means we are putting this code into the `__init__`. So add the highlighted code below.
+To display the current user's details:
+
+1. Open the **AccountComponent** in code mode
+2. We want to load the first and last name before the form opens, so go to the `__init__` method.
+3. Add the highlighted code below
 
 ```{code-block} python
 :linenos:
@@ -54,11 +56,42 @@ Let's test this first stage. Launch your website.
 
 ### Link Edit Details Button
 
-Now to link the **Edit Details** button. To do this we will need to change into Layout mode to create a handler for the **button_edit_click** event.
+Now to link the **Edit Details** button. 
+
+#### Create handler
+
+To do this we will need to:
+
+1. Change into Layout mode to 
+2. Create a handler for the **button_edit_click** event by clicking **on click event**
 
 ![button edit click handler](./assets/img/18a/button_edit_click_handler.gif)
 
-Now we need to copy the code from the **link_register_click** hander in the **MainForm** and add it to the **button_edit_click** handler.
+#### Copy code from MainForm
+
+The **link_register_click** hander in the **MainForm** has the code to load the the SetDetailsComponent. Therefore:
+
+1. Open **MainForm** in code mode
+2. Go to the **link_register_click** event handler
+3. **Copy** the highlighted code below
+
+```{code-block} python
+:linenos:
+:lineno-start: 68
+:emphasize-lines: 3-6
+  def link_register_click(self, **event_args):
+    anvil.users.signup_with_form(allow_cancel=True)
+    self.content_panel.clear()
+    self.content_panel.add_component(SetDetailsComponent())
+    self.label_title.text = self.breadcrumb_stem + " - Details"
+    self.set_active_link("details")
+```
+
+#### Add it to the button_edit_click hanlder
+
+1. Return to **AccountComponent**
+2. Go to the the **button_edit_click** handler
+3. Paste the code
 
 ```{code-block} python
 :linenos:
@@ -71,12 +104,32 @@ Now we need to copy the code from the **link_register_click** hander in the **Ma
     self.set_active_link("details")
 ```
 
-Now, just like we did in the **SetDetailsComponent**, we need to use `get_open_form` to reference the **MainForm** and the change all the `self` references so they reference the **MainForm**.
+#### Fix reference to self
+
+Remember in the **SetDetailsComponent**, we used `get_open_form` to reference the **MainForm**? We had to change all the `self` references so they reference the **MainForm**.
+
+We need to do that again.
+
+First, add the highlighted code below.
 
 ```{code-block} python
 :linenos:
 :lineno-start: 20
-:emphasize-lines: 2-6
+:emphasize-lines: 2
+  def button_edit_click(self, **event_args):
+    main_form = get_open_form()
+    self.content_panel.clear()
+    self.content_panel.add_component(SetDetailsComponent())
+    self.label_title.text = self.breadcrumb_stem + " - Account - Details"
+    self.set_active_link("details")
+```
+
+Then, in the highlighted code, replace every `self` with `main_form` (hint: there are six of them.)
+
+```{code-block} python
+:linenos:
+:lineno-start: 20
+:emphasize-lines: 3-6
   def button_edit_click(self, **event_args):
     main_form = get_open_form()
     main_form.content_panel.clear()
@@ -85,7 +138,7 @@ Now, just like we did in the **SetDetailsComponent**, we need to use `get_open_f
     main_form.set_active_link("details")
 ```
 
-Finally we need to import the **SetDetailsComponents**.
+Notice that there is a brown squiggly line under `SetDetailsComponent()`. This is telling you that the **AccountComponent** can't find the **SetDetailsComponents**. To fix this we need to use the code below to import **SetDetailsComponents** (remember, check the line numbers).
 
 ```{code-block} python
 :linenos:
@@ -107,9 +160,9 @@ Almost finished this, just the testing left to go.
 
 Launch your website.
 
-**YIKES!**
+<span style="color: #ff0000;">**YIKES!**</span>
 
-You will have got the following error:
+You will have gotten the following error:
 
 ![circular reference](./assets/img/18a/circular_reference.png)
 
