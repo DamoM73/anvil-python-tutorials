@@ -14,7 +14,7 @@ To assist in this journey, we will create an application to assist students in p
 
 ## Required Knowledge
 
-Scince Anvil apps are written in Python, you will only need to know one programming language. You don't even need to know HTML or CSS (they can be useful for more advanced features).
+Since Anvil apps are written in Python, you will only need to know one programming language. You don't even need to know HTML or CSS (they can be useful for more advanced features).
 
 Before starting this course you will need foundational Python skills along with some more intermediate knowledge. The table below details the skillset, along with my other courses that will provide such knowledge.
 
@@ -23,7 +23,6 @@ Before starting this course you will need foundational Python skills along with 
 | Basic syntax and structure<br>Control flow<br>Functions<br>Data structures | **<a href="https://damom73.github.io/turtle-introduction-to-python/" target="_blank">A Turtle Introduction to Python</a>** |
 | Object Orientated Programming | **<a href="https://damom73.github.io/python-oop-with-deepest-dungeon/" target="_blank">Deepest Dungeon - Python OOP</a>** |
 | Modules and Libraries | **<a href="https://damom73.github.io/space-rescue-tutorials/" target="_blank">Space Rescue</a>** |
-
 
 ## Starting with Anvil
 
