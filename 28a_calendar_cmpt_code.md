@@ -1,4 +1,4 @@
-# Calendar Component Code
+# CalendarComponent Code
 
 ```{topic} In this tutorial you will:
 - Retrieving and processing assessment data using Pandas.

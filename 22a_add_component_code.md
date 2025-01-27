@@ -1,4 +1,4 @@
-# Add Component Code
+# AddComponent Code
 
 ```{topic} In this tutorial you will:
 - Initialize variables in `__init__` method.

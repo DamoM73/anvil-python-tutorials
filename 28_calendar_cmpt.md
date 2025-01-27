@@ -1,4 +1,4 @@
-# Calendar Component Layout
+# CalendarComponent Layout
 
 ```{topic} In this tutorial you will:
 - Understanding how to integrate a Gantt chart into the web app.

@@ -1,4 +1,4 @@
-# Add Component Design
+# AddComponent Design
 
 ```{topic} In this tutorial you will:
 - Add an icon to the title.
