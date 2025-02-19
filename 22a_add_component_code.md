@@ -155,7 +155,7 @@ Launch your website and check if it works. Enter a subject, assessment details, 
 
 We can make a few observations from this test:
 
-1. The save message should look the same as the error message
+1. The save message should not look the same as the error message
 2. When the same message is presented, the input values in the form should be reset
 
 Let's fix those up.
