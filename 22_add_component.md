@@ -109,7 +109,7 @@ Then we need to add the **due** date:
 Just like the **SetDetailsComponent** we will be validating the user's input, therefore we need an element to display warnings. Previously we have displayed warnings under the card, so we will continue this to maintain consistency.
 
 1. Add a label
-2. Change the **name** to `label.error`
+2. Change the **name** to `label_error`
 3. Untick **visibility**
 4. Change **foreground** to `#ff0000`
 5. Change **role** to `headline`
