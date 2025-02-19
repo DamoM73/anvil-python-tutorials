@@ -51,7 +51,7 @@ First add the **subject** elements
 6. Change the text box's **placeholder** to `Enter subject name`
 7. Change the text box's **align** to `right` 
 
-![subject](./assets/img/22/details.gif)
+![subject](./assets/img/22/subject.gif)
 
 Then add the **details** elements
 
@@ -63,7 +63,7 @@ Then add the **details** elements
 6. Change the text box's **placeholder** to `Enter assessment details`
 7. Change the text box's **align** to right 
 
-![subject](./assets/img/22/subject.gif)
+![subject](./assets/img/22/details.gif)
 
 ### Dates
 
