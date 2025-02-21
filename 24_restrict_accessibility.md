@@ -36,7 +36,7 @@ Open the **AddComponent** in **Design** mode.
 
 
 5. Add a label to the **self.card_error**
-6. Add the **text** to `Please login to access this feature`
+6. Change the **text** to `Please login to access this feature`
 7. Change **foreground** to `#ff0000`
 8. Change **role** to your desired formatting
 9. Change **icon** to `fa:warning`
@@ -46,7 +46,7 @@ Open the **AddComponent** in **Design** mode.
 
 ### CalendarComponent Layout
 
-In the **CalendarComponent** add two cards:
+We haven't added anything to the **CalendarComponent**, so we will need to add two cards:
 
 - call the first one **self.card_details**
 - call the second one **self.card_error**

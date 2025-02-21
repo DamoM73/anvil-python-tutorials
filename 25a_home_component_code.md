@@ -111,7 +111,7 @@ Now add the following code to the `__init__` method.
     self.label_due.text = self.item['due_date'].strftime('%d/%m/%Y')
 ```
 
-```{admonition} Repeating panel an items
+```{admonition} Repeating panels and items
 :class: note
 The repeating panel is connected to a list of items. This means that each instance of the panel is connected to one of the items.
 
