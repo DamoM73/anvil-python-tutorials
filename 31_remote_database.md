@@ -250,7 +250,7 @@ Once again we need to remove of the `anvil.users.get_user()` from the `__init__`
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    if anvil.users.get_user():
+    if data_access.the_user():
       self.card_details.visible = True
       self.card_error.visible = False
       self.load_chart()
