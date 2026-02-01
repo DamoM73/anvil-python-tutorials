@@ -1,0 +1,923 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Complete Account Component" href="20_complete_account_cmpt.html"><link rel="prev" title="AccountComponent Code" href="18a_account_code.html">
+        <link rel="prefetch" href="_static/logo.png" as="image">
+
+    <link rel="shortcut icon" href="_static/logo.ico"><!-- Generated with Sphinx 7.4.7 and Furo 2025.12.19 -->
+        <title>Switch Component Method - StudyM8</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=4476ed65" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  --font-stack: gill sans, sans-serif;
+  --font-stack--monospace: monaco, monospace;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">StudyM8</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">StudyM8</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_web_intro.html">How websites work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_studyM8_design.html">StudyM8 design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_create_app.html">Create new app</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_anvil_interface.html">Anvil Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_create_home_form.html">Create the Main Form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_create_components.html">Adding Components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_connect_links.html">Connecting links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_set_start_component.html">Set the Initial Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_adjust_title.html">Adjust Page Title</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_active_link.html">Show Active Link</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_add_users.html">Adding Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_user_features.html">User Management Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_account_links_visiability.html">Account Links Visibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_set_details.html">SetDetailsComponent Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15a_set_details_code.html">SetDetailsComponent Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_user_service.html">User Server Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_set_details_nav.html">SetDetailsComponent Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_account_cmpt.html">AccountComponent Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18a_account_code.html">AccountComponent Code</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Switch Component Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20_complete_account_cmpt.html">Complete Account Component</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_assessment_table.html">The Assessments Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_add_component.html">AddComponent Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22a_add_component_code.html">AddComponent Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23_assessment_service.html">Assessment Service Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24_restrict_accessibility.html">Prevent Unauthorised Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25_home_user_cmpt.html">HomeComponent Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25a_home_component_code.html">HomeComponent Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26_complete_assessment.html">Complete Assessments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="26a_adjust_assessment_display.html">Adjust Assessments Display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27_edit_assessment.html">Edit Assessments Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27a_edit_assessment_code.html">Edit Assessments Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="28_calendar_cmpt.html">CalendarComponent Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="28a_calendar_cmpt_code.html">CalendarComponent Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="29_welcome.html">Welcome Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="30_optimisation.html">Optimisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="31_remote_database.html">Reduce Remote Database Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="32_logout_func.html">Create Logout Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="33_update_user_func.html">Create Update User Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="34_my_assess_func.html">My Assessments Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="34a_get_chart_func.html">Get Chart Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="35_local_database.html">Reduce Local Database Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="98_resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="99_topics.html">Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licencing.html">Licensing</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/19_switch_components.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="switch-component-method">
+<h1>Switch Component Method<a class="headerlink" href="#switch-component-method" title="Link to this heading">¶</a></h1>
+<aside class="topic">
+<p class="topic-title">In this tutorial you will:</p>
+<ul class="simple">
+<li><p>Understanding the importance of refactoring for code maintainability.</p></li>
+<li><p>Creating a centralized navigation method (switch_component).</p></li>
+<li><p>Replacing distributed navigation code with calls to the new method.</p></li>
+<li><p>Ensuring that the refactored code functions correctly.</p></li>
+</ul>
+</aside>
+<p>Last tutorial we encountered a problem that was caused by having our navigation code distributed throughout our codebase. This tutorial we will refactor the code so all this navigation code resides in the <strong>MainForm</strong>.</p>
+<section id="preparing-to-refactor">
+<h2>Preparing to refactor<a class="headerlink" href="#preparing-to-refactor" title="Link to this heading">¶</a></h2>
+<p>When refactoring, it is important to ensure that your refactored code works just the same as the old code. This presents a problem for us, in that our current code does not work. So we need to adjust the code so that it at least runs without causing an error.</p>
+<p>To do this we will simply remove the import that causes the error. Open your <strong>AccountComponent</strong> in code mode and <strong>delete</strong> line 8</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span><span class="w"> </span><span class="nn">._anvil_designer</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccountComponentTemplate</span>
+<span class="linenos">2</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">3</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.server</span>
+<span class="linenos">4</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tables</span>
+<span class="linenos">5</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables.query</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">q</span>
+<span class="linenos">6</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="kn">import</span> <span class="n">app_tables</span>
+<span class="linenos">7</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.users</span>
+<span class="hll"><span class="linenos">8</span><span class="kn">from</span><span class="w"> </span><span class="nn">..SetDetailsComponent</span><span class="w"> </span><span class="kn">import</span> <span class="n">SetDetailsComponent</span>
+</span></pre></div>
+</div>
+<div class="notice admonition">
+<p class="admonition-title">Code explaination</p>
+<p>It is important to note that clicking the <strong>Edit Details</strong> button will still cause an error. We will worry about fixing this problem after we have refactored the code.</p>
+</div>
+</section>
+<section id="planning">
+<h2>Planning<a class="headerlink" href="#planning" title="Link to this heading">¶</a></h2>
+<p>What we will do, is consolidate all the navigation code into one <strong>MainForm</strong> method called <strong>switch_component</strong>. Let’s look at the <strong>MainForm</strong> current navigation code to establish what this <strong>switch_component</strong> method needs to do.</p>
+<p>Below is the navigation code in the <code class="docutils literal notranslate"><span class="pre">link_home_click</span></code> handler, what can we identify?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">45</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_home_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="hll"><span class="linenos">46</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">47</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">HomeComponent</span><span class="p">())</span>
+</span><span class="hll"><span class="linenos">48</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span>
+</span><span class="hll"><span class="linenos">49</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>There are four highlighted lines indicate four steps to the navigation process:</p>
+<ol class="arabic simple">
+<li><p><strong>line 46</strong> → removes the current component</p></li>
+<li><p><strong>line 47</strong> → adds the desired component</p></li>
+<li><p><strong>line 48</strong> → sets the correct breadcrumb title</p></li>
+<li><p><strong>line 49</strong> → set the correct active link</p></li>
+</ol>
+<p>We need to include all four of these processes into our new <strong>switch_component</strong> method.</p>
+<p>Remember in the <strong>set_active_link</strong> method, we passed a string to set the state of the <strong>MainForm</strong> (check below).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">24</span>  <span class="k">def</span><span class="w"> </span><span class="nf">set_active_link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="linenos">25</span>    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;home&quot;</span><span class="p">:</span>
+<span class="linenos">26</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_home</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="s2">&quot;selected&quot;</span>
+<span class="linenos">27</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">28</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_home</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos">29</span>    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
+<span class="linenos">30</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_add</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="s2">&quot;selected&quot;</span>
+<span class="linenos">31</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">32</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_add</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos">33</span>    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;calendar&quot;</span><span class="p">:</span>
+<span class="linenos">34</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_calendar</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="s2">&quot;selected&quot;</span>
+<span class="linenos">35</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">36</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_calendar</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<p>We can use this same concept to send a state to the <strong>switch_component</strong> (eg. <code class="docutils literal notranslate"><span class="pre">&quot;home&quot;</span></code>) and the <strong>switch_component</strong> method will respond to that state and load the <strong>HomeComponent</strong></p>
+<p>Ok, now put that into practice.</p>
+</section>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Link to this heading">¶</a></h2>
+<section id="create-the-switch-component">
+<h3>Create the switch_component<a class="headerlink" href="#create-the-switch-component" title="Link to this heading">¶</a></h3>
+<section id="copy-code-from-home-link-code">
+<h4>Copy code from home_link_code<a class="headerlink" href="#copy-code-from-home-link-code" title="Link to this heading">¶</a></h4>
+<p>To implementing our plan:</p>
+<ol class="arabic simple">
+<li><p>Open the <strong>MainForm</strong> code mode</p></li>
+<li><p>Create the new <strong>switch_component</strong> method above <strong>set_active_link</strong> - it will need to accept one argument called <strong>state</strong>.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">25</span>  <span class="k">def</span><span class="w"> </span><span class="nf">switch_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+</span></pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Go to the <strong>link_home_click</strong> method</p></li>
+<li><p>Copy the code that is highlighted below</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">50</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_calendar_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="hll"><span class="linenos">51</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">52</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">CalendarComponent</span><span class="p">())</span>
+</span><span class="hll"><span class="linenos">53</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Calendar&quot;</span>
+</span><span class="hll"><span class="linenos">54</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="s2">&quot;calendar&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Go back to the <strong>switch_component</strong> method.</p></li>
+<li><p>Add the highlighted structural comment</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">25</span>  <span class="k">def</span><span class="w"> </span><span class="nf">switch_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="hll"><span class="linenos">26</span>    <span class="c1"># execution</span>
+</span></pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Then paste the code you copied</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">25</span>  <span class="k">def</span><span class="w"> </span><span class="nf">switch_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="linenos">26</span>    <span class="c1"># execution</span>
+<span class="hll"><span class="linenos">27</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">28</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">HomeComponent</span><span class="p">())</span>
+</span><span class="hll"><span class="linenos">29</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span>
+</span><span class="hll"><span class="linenos">30</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</section>
+<section id="make-code-generic">
+<h4>Make code generic<a class="headerlink" href="#make-code-generic" title="Link to this heading">¶</a></h4>
+<p>At the moment, the code just loads the <strong>HomeComponent</strong>. We want to change it so that it response to the <code class="docutils literal notranslate"><span class="pre">state</span></code> that is passed to <strong>switch_component</strong>.</p>
+<p>Let’s consider each line of code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">25</span>  <span class="k">def</span><span class="w"> </span><span class="nf">switch_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="linenos">26</span>    <span class="c1"># execution</span>
+<span class="linenos">27</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">28</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">HomeComponent</span><span class="p">())</span>
+<span class="linenos">29</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span>
+<span class="linenos">30</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>line 27</strong> → it is generic, so there is no need to change it</p></li>
+<li><p><strong>line 28</strong> → we want to change the component loaded, so lets change <code class="docutils literal notranslate"><span class="pre">HomeComponent()</span></code> to a variable called <code class="docutils literal notranslate"><span class="pre">cmpt</span></code>. This variable can be set to different components</p></li>
+<li><p><strong>line 29</strong> → similarly, we want to change the bread_crumb according to the <code class="docutils literal notranslate"><span class="pre">state</span></code>, so let’s replace <code class="docutils literal notranslate"><span class="pre">self.breadcrumb_stem</span></code> with a variable called <code class="docutils literal notranslate"><span class="pre">breadcrumb</span></code></p></li>
+<li><p><strong>line 30</strong> → we want to call <code class="docutils literal notranslate"><span class="pre">set_active_link</span></code> with the <code class="docutils literal notranslate"><span class="pre">state</span></code> that is passed, so replace <code class="docutils literal notranslate"><span class="pre">home</span></code> with <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p></li>
+</ul>
+<p>With these changes your code should look like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">25</span>  <span class="k">def</span><span class="w"> </span><span class="nf">switch_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="linenos">26</span>    <span class="c1"># execution</span>
+<span class="linenos">27</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="hll"><span class="linenos">28</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">cmpt</span><span class="p">)</span>
+</span><span class="hll"><span class="linenos">29</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">breadcrumb</span>
+</span><span class="hll"><span class="linenos">30</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</section>
+<section id="add-response-to-state">
+<h4>Add response to state<a class="headerlink" href="#add-response-to-state" title="Link to this heading">¶</a></h4>
+<p>Now we just need to use <code class="docutils literal notranslate"><span class="pre">state</span></code> to establish the values of <code class="docutils literal notranslate"><span class="pre">cmpt</span></code> and <code class="docutils literal notranslate"><span class="pre">breadcrumb</span></code>.</p>
+<p>We will use an <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">...</span> <span class="pre">elif</span></code> statement to establish these values.</p>
+<p>There are five possible states for our app:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;home&quot;</span></code> → <code class="docutils literal notranslate"><span class="pre">cmpt</span> <span class="pre">=</span> <span class="pre">HomeComponent()</span></code> and <code class="docutils literal notranslate"><span class="pre">breadcrumb</span> <span class="pre">=</span> <span class="pre">self.breadcrumb_stem</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;add&quot;</span></code> → <code class="docutils literal notranslate"><span class="pre">cmpt</span> <span class="pre">=</span> <span class="pre">AddComponent()</span></code> and <code class="docutils literal notranslate"><span class="pre">breadcrumb</span> <span class="pre">=</span> <span class="pre">self.breadcrumb_stem</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">-</span> <span class="pre">Account&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;account&quot;</span></code> → <code class="docutils literal notranslate"><span class="pre">cmpt</span> <span class="pre">=</span> <span class="pre">Account()</span></code> and <code class="docutils literal notranslate"><span class="pre">breadcrumb</span> <span class="pre">=</span> <span class="pre">self.breadcrumb_stem</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">-</span> <span class="pre">Add&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;calendar</span></code>” → <code class="docutils literal notranslate"><span class="pre">cmpt</span> <span class="pre">=</span> <span class="pre">CalendarComponent()</span></code> and <code class="docutils literal notranslate"><span class="pre">breadcrumb</span> <span class="pre">=</span> <span class="pre">self.breadcrumb_stem</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">-</span> <span class="pre">Calendar&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;details&quot;</span></code> → <code class="docutils literal notranslate"><span class="pre">cmpt</span> <span class="pre">=</span> <span class="pre">SetDetailsComponent()</span></code> and <code class="docutils literal notranslate"><span class="pre">breadcrumb</span> <span class="pre">=</span> <span class="pre">self.breadcrumb_stem</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">-</span> <span class="pre">Account</span> <span class="pre">-</span> <span class="pre">Set</span> <span class="pre">Details&quot;</span></code></p></li>
+</ul>
+<p>So let’s put this into an <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">...</span> <span class="pre">elif</span></code> statement in our code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">25</span>  <span class="k">def</span><span class="w"> </span><span class="nf">switch_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="hll"><span class="linenos">26</span>    <span class="c1"># set state</span>
+</span><span class="hll"><span class="linenos">27</span>    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;home&quot;</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">28</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">HomeComponent</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">29</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span>
+</span><span class="hll"><span class="linenos">30</span>    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;account&quot;</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">31</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">AccountComponent</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">32</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Account&quot;</span>
+</span><span class="hll"><span class="linenos">33</span>    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">34</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">AddComponent</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">35</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Add&quot;</span>
+</span><span class="hll"><span class="linenos">36</span>    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;calendar&quot;</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">37</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">CalendarComponent</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">38</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Calendar&quot;</span>
+</span><span class="hll"><span class="linenos">39</span>    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;details&quot;</span><span class="p">:</span>
+</span><span class="hll"><span class="linenos">40</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">SetDetailsComponent</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">41</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Account - Set Details&quot;</span>
+</span><span class="linenos">42</span>    
+<span class="linenos">43</span>    <span class="c1"># execution</span>
+<span class="linenos">44</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">45</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">cmpt</span><span class="p">)</span>
+<span class="linenos">46</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">breadcrumb</span>
+<span class="linenos">47</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="replace-old-navigation">
+<h3>Replace old navigation<a class="headerlink" href="#replace-old-navigation" title="Link to this heading">¶</a></h3>
+<p>Now that we have create the <code class="docutils literal notranslate"><span class="pre">switch_component</span></code> method, we need to go through our codebase and replace all the navigation code with calls the the <code class="docutils literal notranslate"><span class="pre">switch_component</span></code> method.</p>
+<p>The best way to find the navigation code is to do a search for the <code class="docutils literal notranslate"><span class="pre">add_component</span></code> method.</p>
+<ol class="arabic simple">
+<li><p>click on the search icon</p></li>
+<li><p>type <code class="docutils literal notranslate"><span class="pre">add_component</span></code> into the search box</p></li>
+</ol>
+<p><img alt="search" src="_images/search.png" /></p>
+<section id="mainform">
+<h4>MainForm<a class="headerlink" href="#mainform" title="Link to this heading">¶</a></h4>
+<p>We can see that the <strong>MainForm</strong> has the majority of the navigation, so lets start there.</p>
+<section id="init">
+<h5><code class="docutils literal notranslate"><span class="pre">__init__</span></code><a class="headerlink" href="#init" title="Link to this heading">¶</a></h5>
+<p>In the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> we have our first code to change, lines 22 and 23.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">16</span>  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">properties</span><span class="p">):</span>
+<span class="linenos">17</span>    <span class="c1"># Set Form properties and Data Bindings.</span>
+<span class="linenos">18</span>    <span class="bp">self</span><span class="o">.</span><span class="n">init_components</span><span class="p">(</span><span class="o">**</span><span class="n">properties</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="c1"># Any code you write here will run before the form opens.</span>
+<span class="hll"><span class="linenos">22</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">HomeComponent</span><span class="p">())</span>
+</span><span class="hll"><span class="linenos">23</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>They need to be replaced with a single call to <code class="docutils literal notranslate"><span class="pre">switch_component</span></code> passing the <code class="docutils literal notranslate"><span class="pre">&quot;home&quot;</span></code> state.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">16</span>  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">properties</span><span class="p">):</span>
+<span class="linenos">17</span>    <span class="c1"># Set Form properties and Data Bindings.</span>
+<span class="linenos">18</span>    <span class="bp">self</span><span class="o">.</span><span class="n">init_components</span><span class="p">(</span><span class="o">**</span><span class="n">properties</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="c1"># Any code you write here will run before the form opens.</span>
+<span class="hll"><span class="linenos">22</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</section>
+<section id="link-click-handlers">
+<h5>link_click handlers<a class="headerlink" href="#link-click-handlers" title="Link to this heading">¶</a></h5>
+<p>The rest of the old navigation code is in our various link_click handlers. We will use the link_home_click hander as an example. Below shows the code that needs to be removed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">68</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_home_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="hll"><span class="linenos">69</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">70</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">HomeComponent</span><span class="p">())</span>
+</span><span class="hll"><span class="linenos">71</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span>
+</span><span class="hll"><span class="linenos">72</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>Which is replaced with the code below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">68</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_home_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="hll"><span class="linenos">69</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>Do the same for:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">link_account_click</span></code> handler</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">link_add_click</span></code> handler</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">link_calendar_click</span></code> handler</p></li>
+</ul>
+</section>
+<section id="link-register-click-handler">
+<h5><code class="docutils literal notranslate"><span class="pre">link_register_click</span></code> handler<a class="headerlink" href="#link-register-click-handler" title="Link to this heading">¶</a></h5>
+<p>In the <code class="docutils literal notranslate"><span class="pre">link_register_click</span></code> handler you will need to only replace the old navigation code (highlighted below).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">81</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_register_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">82</span>    <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">signup_with_form</span><span class="p">(</span><span class="n">allow_cancel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="hll"><span class="linenos">83</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">84</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">SetDetailsComponent</span><span class="p">())</span>
+</span><span class="hll"><span class="linenos">85</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Account - Details&quot;</span>
+</span><span class="hll"><span class="linenos">86</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="s2">&quot;details&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>Add a <code class="docutils literal notranslate"><span class="pre">switch_component</span></code> call passing <code class="docutils literal notranslate"><span class="pre">details</span></code> as the state.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">81</span><span class="k">def</span><span class="w"> </span><span class="nf">link_register_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">82</span>    <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">signup_with_form</span><span class="p">(</span><span class="n">allow_cancel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="hll"><span class="linenos">83</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;details&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</section>
+<section id="link-login-click-and-link-logout-click-handlers">
+<h5><code class="docutils literal notranslate"><span class="pre">link_login_click</span></code> and <code class="docutils literal notranslate"><span class="pre">link_logout_click</span></code> handlers<a class="headerlink" href="#link-login-click-and-link-logout-click-handlers" title="Link to this heading">¶</a></h5>
+<p>The last two <strong>MainForm</strong> handlers we need to fix are the <code class="docutils literal notranslate"><span class="pre">link_login_click</span></code> and <code class="docutils literal notranslate"><span class="pre">link_logout_click</span></code> handlers. We’ll look at the <code class="docutils literal notranslate"><span class="pre">link_login_click</span></code> handler and then you can repeat the process for the <code class="docutils literal notranslate"><span class="pre">link_logout_click</span></code> handler.</p>
+<p>Replace the highlighted text:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">85</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_login_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">86</span>    <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">login_with_form</span><span class="p">(</span><span class="n">allow_cancel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="hll"><span class="linenos">87</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">88</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">HomeComponent</span><span class="p">())</span>
+</span><span class="hll"><span class="linenos">89</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span>
+</span><span class="hll"><span class="linenos">90</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>With a call to <code class="docutils literal notranslate"><span class="pre">switch_component</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">85</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_login_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">86</span>    <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">login_with_form</span><span class="p">(</span><span class="n">allow_cancel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="hll"><span class="linenos">87</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</section>
+</section>
+<section id="check-search-results">
+<h4>Check search results<a class="headerlink" href="#check-search-results" title="Link to this heading">¶</a></h4>
+<p>After all those changes in MainForm, the only use of <code class="docutils literal notranslate"><span class="pre">add_component</span></code> should be in the <code class="docutils literal notranslate"><span class="pre">switch_components</span></code> method. This can be easily seen in the search box.</p>
+<p><img alt="search 2" src="_images/search_2.png" /></p>
+</section>
+<section id="setdetailscomponent">
+<h4>SetDetailsComponent<a class="headerlink" href="#setdetailscomponent" title="Link to this heading">¶</a></h4>
+<p>Next we will change the <strong>SetDetailsComponent</strong>, so open it in code mode.</p>
+<p>Below is the old navigation code. Remember <strong>line 35</strong> provides access to all methods in the <strong>MainForm</strong>.  <strong>switch_component</strong> is on the <strong>MainForm</strong>, so we need to keep this line so we can access the method.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">35</span>    <span class="n">main_form</span> <span class="o">=</span> <span class="n">get_open_form</span><span class="p">()</span>
+</span><span class="linenos">36</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">37</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">AccountComponent</span><span class="p">())</span>
+<span class="linenos">38</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">main_form</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Account&quot;</span>
+<span class="linenos">39</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">((</span><span class="s2">&quot;account&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Remove the remaining navigation code, and replace it with a call to <code class="docutils literal notranslate"><span class="pre">main_form.switch_component</span></code>,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">35</span>    <span class="n">main_form</span> <span class="o">=</span> <span class="n">get_open_form</span><span class="p">()</span>
+<span class="hll"><span class="linenos">36</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>Since we are no longer referencing <code class="docutils literal notranslate"><span class="pre">AccountComponent()</span></code> we can <strong>delete</strong> its import from the import section.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span><span class="w"> </span><span class="nn">._anvil_designer</span><span class="w"> </span><span class="kn">import</span> <span class="n">SetDetailsComponentTemplate</span>
+<span class="linenos">2</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">3</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.server</span>
+<span class="linenos">4</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tables</span>
+<span class="linenos">5</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables.query</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">q</span>
+<span class="linenos">6</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="kn">import</span> <span class="n">app_tables</span>
+<span class="linenos">7</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.users</span>
+<span class="hll"><span class="linenos">8</span><span class="kn">from</span><span class="w"> </span><span class="nn">..AccountComponent</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccountComponent</span>
+</span></pre></div>
+</div>
+<p>We should now only have two calls the <code class="docutils literal notranslate"><span class="pre">add_component</span></code> in our search box.</p>
+<p><img alt="search 3" src="_images/search_3.png" /></p>
+</section>
+<section id="accountcomponent">
+<h4>AccountComponent<a class="headerlink" href="#accountcomponent" title="Link to this heading">¶</a></h4>
+<p>Finally we will replace the code that started us down this refactoring path.</p>
+<p>Open the <strong>AccountComponent</strong> in code mode.</p>
+<p><strong>Delete</strong> the highlighted lines from the <code class="docutils literal notranslate"><span class="pre">button_edit_click</span></code> handler</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">20</span>  <span class="k">def</span><span class="w"> </span><span class="nf">button_edit_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">21</span>    <span class="n">main_form</span> <span class="o">=</span> <span class="n">get_open_form</span><span class="p">()</span>
+<span class="hll"><span class="linenos">22</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span><span class="hll"><span class="linenos">23</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">SetDetailsComponent</span><span class="p">())</span>
+</span><span class="hll"><span class="linenos">24</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">main_form</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Account - Details&quot;</span>
+</span><span class="hll"><span class="linenos">25</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="s2">&quot;details&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>Then add your call to <code class="docutils literal notranslate"><span class="pre">main_form.switch_component</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">20</span>  <span class="k">def</span><span class="w"> </span><span class="nf">button_edit_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">21</span>    <span class="n">main_form</span> <span class="o">=</span> <span class="n">get_open_form</span><span class="p">()</span>
+<span class="hll"><span class="linenos">22</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;details&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>This should leave you with only one reference to <code class="docutils literal notranslate"><span class="pre">add_component</span></code> in your search results.</p>
+<p><img alt="search 4" src="_images/search_4.png" /></p>
+</section>
+</section>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h2>
+<p>Time to test our refactoring. This has been a significant change to our codebase so we have to be thorough in our testing.</p>
+<p>Launch your website then:</p>
+<ol class="arabic simple">
+<li><p>Logout if you have to</p></li>
+<li><p>Register a new user</p></li>
+<li><p>Add user’s name details and then <strong>Save Details</strong></p></li>
+<li><p>Click <strong>Edit Details</strong></p></li>
+<li><p>Re-enter the user name details and click <strong>Save Details</strong></p></li>
+<li><p>Click <strong>Home</strong></p></li>
+<li><p>Click <strong>Calendar</strong></p></li>
+<li><p>Click <strong>Account</strong></p></li>
+<li><p>Click <strong>Logout</strong></p></li>
+<li><p>Click <strong>Login</strong> and enter user credentials</p></li>
+</ol>
+<p>If you have refactored correctly, you should get through all of these steps without error.</p>
+</section>
+<section id="final-code-state">
+<h2>Final code state<a class="headerlink" href="#final-code-state" title="Link to this heading">¶</a></h2>
+<p>By the end of this tutorial your code should be the same as below:</p>
+<section id="final-setdetailscomponent">
+<h3>Final SetDetailsComponent<a class="headerlink" href="#final-setdetailscomponent" title="Link to this heading">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">._anvil_designer</span><span class="w"> </span><span class="kn">import</span> <span class="n">SetDetailsComponentTemplate</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.server</span>
+<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tables</span>
+<span class="linenos"> 5</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables.query</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">q</span>
+<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="kn">import</span> <span class="n">app_tables</span>
+<span class="linenos"> 7</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.users</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="k">class</span><span class="w"> </span><span class="nc">SetDetailsComponent</span><span class="p">(</span><span class="n">SetDetailsComponentTemplate</span><span class="p">):</span>
+<span class="linenos">11</span>  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">properties</span><span class="p">):</span>
+<span class="linenos">12</span>    <span class="c1"># Set Form properties and Data Bindings.</span>
+<span class="linenos">13</span>    <span class="bp">self</span><span class="o">.</span><span class="n">init_components</span><span class="p">(</span><span class="o">**</span><span class="n">properties</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="c1"># Any code you write here will run before the form opens.</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>  <span class="k">def</span><span class="w"> </span><span class="nf">button_save_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">18</span>    
+<span class="linenos">19</span>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_box_first_name</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+<span class="linenos">20</span>      <span class="bp">self</span><span class="o">.</span><span class="n">label_error</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;First name cannot be blank&quot;</span>
+<span class="linenos">21</span>      <span class="bp">self</span><span class="o">.</span><span class="n">label_error</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">22</span>      <span class="k">return</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_box_last_name</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+<span class="linenos">25</span>      <span class="bp">self</span><span class="o">.</span><span class="n">label_error</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Last name cannot be blank&quot;</span>
+<span class="linenos">26</span>      <span class="bp">self</span><span class="o">.</span><span class="n">label_error</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">27</span>      <span class="k">return</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_error</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos">30</span>    <span class="n">anvil</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="s2">&quot;update_user&quot;</span><span class="p">,</span> 
+<span class="linenos">31</span>                      <span class="bp">self</span><span class="o">.</span><span class="n">text_box_first_name</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> 
+<span class="linenos">32</span>                      <span class="bp">self</span><span class="o">.</span><span class="n">text_box_last_name</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span>    <span class="n">main_form</span> <span class="o">=</span> <span class="n">get_open_form</span><span class="p">()</span>
+<span class="linenos">35</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="final-accountcomponent">
+<h3>Final AccountComponent<a class="headerlink" href="#final-accountcomponent" title="Link to this heading">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">._anvil_designer</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccountComponentTemplate</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.server</span>
+<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tables</span>
+<span class="linenos"> 5</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables.query</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">q</span>
+<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="kn">import</span> <span class="n">app_tables</span>
+<span class="linenos"> 7</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.users</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="k">class</span><span class="w"> </span><span class="nc">AccountComponent</span><span class="p">(</span><span class="n">AccountComponentTemplate</span><span class="p">):</span>
+<span class="linenos">11</span>  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">properties</span><span class="p">):</span>
+<span class="linenos">12</span>    <span class="c1"># Set Form properties and Data Bindings.</span>
+<span class="linenos">13</span>    <span class="bp">self</span><span class="o">.</span><span class="n">init_components</span><span class="p">(</span><span class="o">**</span><span class="n">properties</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>    <span class="c1"># Any code you write here will run before the form opens.</span>
+<span class="linenos">16</span>    <span class="n">user</span> <span class="o">=</span> <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">get_user</span><span class="p">()</span>
+<span class="linenos">17</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_first_name</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">user</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span>
+<span class="linenos">18</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_last_name</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">user</span><span class="p">[</span><span class="s2">&quot;last_name&quot;</span><span class="p">]</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span>  <span class="k">def</span><span class="w"> </span><span class="nf">button_edit_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">21</span>    <span class="n">main_form</span> <span class="o">=</span> <span class="n">get_open_form</span><span class="p">()</span>
+<span class="linenos">22</span>    <span class="n">main_form</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;details&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="final-mainform">
+<h3>Final MainForm<a class="headerlink" href="#final-mainform" title="Link to this heading">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">._anvil_designer</span><span class="w"> </span><span class="kn">import</span> <span class="n">MainFormTemplate</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.server</span>
+<span class="linenos"> 4</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tables</span>
+<span class="linenos"> 5</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.tables.query</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">q</span>
+<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">anvil.tables</span><span class="w"> </span><span class="kn">import</span> <span class="n">app_tables</span>
+<span class="linenos"> 7</span><span class="kn">import</span><span class="w"> </span><span class="nn">anvil.users</span>
+<span class="linenos"> 8</span><span class="kn">from</span><span class="w"> </span><span class="nn">..HomeComponent</span><span class="w"> </span><span class="kn">import</span> <span class="n">HomeComponent</span>
+<span class="linenos"> 9</span><span class="kn">from</span><span class="w"> </span><span class="nn">..CalendarComponent</span><span class="w"> </span><span class="kn">import</span> <span class="n">CalendarComponent</span>
+<span class="linenos">10</span><span class="kn">from</span><span class="w"> </span><span class="nn">..AddComponent</span><span class="w"> </span><span class="kn">import</span> <span class="n">AddComponent</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">..AccountComponent</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccountComponent</span>
+<span class="linenos">12</span><span class="kn">from</span><span class="w"> </span><span class="nn">..SetDetailsComponent</span><span class="w"> </span><span class="kn">import</span> <span class="n">SetDetailsComponent</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="k">class</span><span class="w"> </span><span class="nc">MainForm</span><span class="p">(</span><span class="n">MainFormTemplate</span><span class="p">):</span>
+<span class="linenos">16</span>  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">properties</span><span class="p">):</span>
+<span class="linenos">17</span>    <span class="c1"># Set Form properties and Data Bindings.</span>
+<span class="linenos">18</span>    <span class="bp">self</span><span class="o">.</span><span class="n">init_components</span><span class="p">(</span><span class="o">**</span><span class="n">properties</span><span class="p">)</span>
+<span class="linenos">19</span>    <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="c1"># Any code you write here will run before the form opens.</span>
+<span class="linenos">22</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>  <span class="k">def</span><span class="w"> </span><span class="nf">switch_component</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="linenos">25</span>    <span class="c1"># set state</span>
+<span class="linenos">26</span>    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;home&quot;</span><span class="p">:</span>
+<span class="linenos">27</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">HomeComponent</span><span class="p">()</span>
+<span class="linenos">28</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span>
+<span class="linenos">29</span>    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;account&quot;</span><span class="p">:</span>
+<span class="linenos">30</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">AccountComponent</span><span class="p">()</span>
+<span class="linenos">31</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Account&quot;</span>
+<span class="linenos">32</span>    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
+<span class="linenos">33</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">AddComponent</span><span class="p">()</span>
+<span class="linenos">34</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Add&quot;</span>
+<span class="linenos">35</span>    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;calendar&quot;</span><span class="p">:</span>
+<span class="linenos">36</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">CalendarComponent</span><span class="p">()</span>
+<span class="linenos">37</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Calendar&quot;</span>
+<span class="linenos">38</span>    <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;details&quot;</span><span class="p">:</span>
+<span class="linenos">39</span>      <span class="n">cmpt</span> <span class="o">=</span> <span class="n">SetDetailsComponent</span><span class="p">()</span>
+<span class="linenos">40</span>      <span class="n">breadcrumb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">breadcrumb_stem</span> <span class="o">+</span> <span class="s2">&quot; - Account - Set Details&quot;</span>
+<span class="linenos">41</span>    
+<span class="linenos">42</span>    <span class="c1"># execution</span>
+<span class="linenos">43</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">44</span>    <span class="bp">self</span><span class="o">.</span><span class="n">content_panel</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">cmpt</span><span class="p">)</span>
+<span class="linenos">45</span>    <span class="bp">self</span><span class="o">.</span><span class="n">label_title</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">breadcrumb</span>
+<span class="linenos">46</span>    <span class="bp">self</span><span class="o">.</span><span class="n">set_active_link</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="linenos">47</span>  
+<span class="linenos">48</span>  <span class="k">def</span><span class="w"> </span><span class="nf">set_active_link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="linenos">49</span>    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;home&quot;</span><span class="p">:</span>
+<span class="linenos">50</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_home</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="s2">&quot;selected&quot;</span>
+<span class="linenos">51</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">52</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_home</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos">53</span>    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
+<span class="linenos">54</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_add</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="s2">&quot;selected&quot;</span>
+<span class="linenos">55</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">56</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_add</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos">57</span>    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;calendar&quot;</span><span class="p">:</span>
+<span class="linenos">58</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_calendar</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="s2">&quot;selected&quot;</span>
+<span class="linenos">59</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">60</span>      <span class="bp">self</span><span class="o">.</span><span class="n">link_calendar</span><span class="o">.</span><span class="n">role</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos">61</span>
+<span class="linenos">62</span>    <span class="bp">self</span><span class="o">.</span><span class="n">link_register</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">get_user</span><span class="p">()</span>
+<span class="linenos">63</span>    <span class="bp">self</span><span class="o">.</span><span class="n">link_login</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">get_user</span><span class="p">()</span>
+<span class="linenos">64</span>    <span class="bp">self</span><span class="o">.</span><span class="n">link_account</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">get_user</span><span class="p">()</span>
+<span class="linenos">65</span>    <span class="bp">self</span><span class="o">.</span><span class="n">link_logout</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">get_user</span><span class="p">()</span>
+<span class="linenos">66</span>  
+<span class="linenos">67</span>  <span class="c1"># --- link handlers</span>
+<span class="linenos">68</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_home_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">69</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+<span class="linenos">70</span>
+<span class="linenos">71</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_calendar_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">72</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;calendar&quot;</span><span class="p">)</span>
+<span class="linenos">73</span>
+<span class="linenos">74</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_add_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">75</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;add&quot;</span><span class="p">)</span>
+<span class="linenos">76</span>
+<span class="linenos">77</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_account_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">78</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;This method is called when the link is clicked&quot;&quot;&quot;</span>
+<span class="linenos">79</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">)</span>
+<span class="linenos">80</span>
+<span class="linenos">81</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_register_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">82</span>    <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">signup_with_form</span><span class="p">(</span><span class="n">allow_cancel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">83</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;details&quot;</span><span class="p">)</span>
+<span class="linenos">84</span>
+<span class="linenos">85</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_login_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">86</span>    <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">login_with_form</span><span class="p">(</span><span class="n">allow_cancel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">87</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+<span class="linenos">88</span>
+<span class="linenos">89</span>  <span class="k">def</span><span class="w"> </span><span class="nf">link_logout_click</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">event_args</span><span class="p">):</span>
+<span class="linenos">90</span>    <span class="n">anvil</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
+<span class="linenos">91</span>    <span class="bp">self</span><span class="o">.</span><span class="n">switch_component</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="20_complete_account_cmpt.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Complete Account Component</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="18a_account_code.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">AccountComponent Code</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Damien Murtagh
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/DamoM73/anvil-python-tutorials" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Switch Component Method</a><ul>
+<li><a class="reference internal" href="#preparing-to-refactor">Preparing to refactor</a></li>
+<li><a class="reference internal" href="#planning">Planning</a></li>
+<li><a class="reference internal" href="#code">Code</a><ul>
+<li><a class="reference internal" href="#create-the-switch-component">Create the switch_component</a><ul>
+<li><a class="reference internal" href="#copy-code-from-home-link-code">Copy code from home_link_code</a></li>
+<li><a class="reference internal" href="#make-code-generic">Make code generic</a></li>
+<li><a class="reference internal" href="#add-response-to-state">Add response to state</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#replace-old-navigation">Replace old navigation</a><ul>
+<li><a class="reference internal" href="#mainform">MainForm</a><ul>
+<li><a class="reference internal" href="#init"><code class="docutils literal notranslate"><span class="pre">__init__</span></code></a></li>
+<li><a class="reference internal" href="#link-click-handlers">link_click handlers</a></li>
+<li><a class="reference internal" href="#link-register-click-handler"><code class="docutils literal notranslate"><span class="pre">link_register_click</span></code> handler</a></li>
+<li><a class="reference internal" href="#link-login-click-and-link-logout-click-handlers"><code class="docutils literal notranslate"><span class="pre">link_login_click</span></code> and <code class="docutils literal notranslate"><span class="pre">link_logout_click</span></code> handlers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#check-search-results">Check search results</a></li>
+<li><a class="reference internal" href="#setdetailscomponent">SetDetailsComponent</a></li>
+<li><a class="reference internal" href="#accountcomponent">AccountComponent</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#testing">Testing</a></li>
+<li><a class="reference internal" href="#final-code-state">Final code state</a><ul>
+<li><a class="reference internal" href="#final-setdetailscomponent">Final SetDetailsComponent</a></li>
+<li><a class="reference internal" href="#final-accountcomponent">Final AccountComponent</a></li>
+<li><a class="reference internal" href="#final-mainform">Final MainForm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=6fefd858"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>
