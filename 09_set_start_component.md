@@ -24,7 +24,7 @@ This is much easier than if first seems. If you look at the **MainForm** code yo
     # Any code you write here will run before the form opens.
 ```
 
-It does exactly what is says. In order to make code run as soon as the form loads, we just bneed to add it to the `__init__` after that comment.
+It does exactly what is says. In order to make code run as soon as the form loads, we just need to add it to the `__init__` after that comment.
 
 ## Loading HomeComponent
 

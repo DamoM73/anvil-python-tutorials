@@ -30,7 +30,7 @@ Below are the wireframes for StudyM8. They follow web design principles called M
 
 ### Welcome Page
 
-The welcome page is the landing page for the website. This is where uses first arrive and the only page that can be accessed without a user account. It will be used to explaining the app and encourage the user to register for an account.
+The welcome page is the landing page for the website. This is where users first arrive and the only page that can be accessed without a user account. It will be used to explaining the app and encourage the user to register for an account.
 
 ![Welcome Page](./assets/img/03/wireframe_welcome.png)
 
