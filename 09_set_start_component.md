@@ -89,7 +89,7 @@ class MainForm(MainFormTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-  self.content_panel.add_component(HomeComponent())
+    self.content_panel.add_component(HomeComponent())
 
   def link_home_click(self, **event_args):
     self.content_panel.clear()
