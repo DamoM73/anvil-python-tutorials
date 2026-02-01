@@ -11,7 +11,7 @@ When you tested your website in the last tutorial, did you notice that, at first
 
 ## Running code upon loading
 
-This is much easier than if first seems. If you look at the **MainForm** code you will notice a comment on line 14.
+This is much easier than it first seems. If you look at the **MainForm** code you will notice a comment on line 14.
 
 ```{code-block} python
 :linenos:
