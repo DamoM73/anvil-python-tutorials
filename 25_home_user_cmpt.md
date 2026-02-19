@@ -75,7 +75,7 @@ Now we need to add elements to the **AssessmentPanel**, so open it in **Design**
 
 ![date start](./assets/img/25/date_start.gif)
 
-15. add a label beside **date_picker_start**
+15. add a label beside **label_start**
 16. change the **text** to `to`
 17. choose the same role as **label_subject**
 
