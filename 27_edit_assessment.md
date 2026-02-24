@@ -37,7 +37,7 @@ Open the **AssessmentPanel** in **Design** mode, then:
 
 ![subject text box](./assets/img/27/subject_text_box.gif)
 
-4. similarly, add a text box under **label_subject**
+4. similarly, add a text box under **label_details**
 5. rename it **text_box_details**
 6. uncheck the **visible** tick
 
