@@ -85,7 +85,7 @@ Now you need to add the highlighted two lines of code:
     self.content_panel.add_component(HomeComponent())
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 14**:
   - `self` &rarr; refers to this form, ie. **HomeForm**.

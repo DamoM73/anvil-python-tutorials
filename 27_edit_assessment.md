@@ -66,7 +66,7 @@ Now we need to add the buttons to allow this switching.
 ![edit button](./assets/img/27/edit_button.gif)
 
 18. add another button under the **button_edit**
-19. rename it **button_save*
+19. rename it **button_save**
 20. delete the **text** - the button is not big enough for text
 21. untick the **visible** check box
 22. change the **role** to your desired formatting

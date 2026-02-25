@@ -40,7 +40,7 @@ First we need to create a variable to store the user data.
 __user = None
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 7** &rarr; a comment to help structure the code
 - **line 8** &rarr; creates the variable we will use to store the user data
@@ -73,7 +73,7 @@ def the_user():
   return __user
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 10** &rarr; creates the function **the_user**
 - **line 11** &rarr; makes the `__user` global, which allows this function to edit it
@@ -119,7 +119,7 @@ import anvil.users
 from .. import data_access
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 8** &rarr; allows **AccountComponent** to use the **data_access** module
 ```
@@ -142,7 +142,7 @@ We need to get rid of the `anvil.users.get_user()` in **line 17**
     self.label_last_name.text = user["last_name"]
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 17** &rarr; uses our new **the_user** function to retrieve user data
 ```
@@ -170,7 +170,7 @@ import anvil.users
 from .. import data_access
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 8** &rarr; allows **AccountComponent** to use the **data_access** module
 ```
@@ -203,7 +203,7 @@ We need to get rid of the `anvil.users.get_user()` in **line 22**
       self.button_add.visible = False
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 22** &rarr; uses our new **the_user** function to retrieve user data
 ```
@@ -232,7 +232,7 @@ import anvil.users
 from .. import data_access
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 9** &rarr; allows **AccountComponent** to use the **data_access** module
 ```
@@ -259,7 +259,7 @@ Once again we need to remove of the `anvil.users.get_user()` from the `__init__`
       self.card_error.visible = True
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 18** &rarr; uses our new **the_user** function to retrieve user data
 ```
@@ -287,7 +287,7 @@ import anvil.users
 from .. import data_access
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 8** &rarr; allows **AccountComponent** to use the **data_access** module
 ```
@@ -312,7 +312,7 @@ Remove of the `anvil.users.get_user()` from the `__init__`
       self.text_box_last_name.text = user["last_name"]
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 17** &rarr; uses our new **the_user** function to retrieve user data
 ```
@@ -346,7 +346,7 @@ from ..WelcomeComponent import WelcomeComponent
 from .. import data_access
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 14** &rarr; allows **AccountComponent** to use the **data_access** module
 ```
@@ -369,7 +369,7 @@ Our first call to `anvil.users.get_user()` occurs in the **switch_component** me
       breadcrumb = self.breadcrumb_stem
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 29** &rarr; uses our new **the_user** function to retrieve user data
 ```
@@ -402,7 +402,7 @@ The remaining four calls to `anvil.users.get_user()` are in the **set_active_lin
     self.link_logout.visible = data_access.the_user()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **lines 67 - 70** &rarr; use our new **the_user** function to retrieve user data
 ```

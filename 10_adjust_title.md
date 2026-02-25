@@ -64,7 +64,7 @@ Check the comment on line 11. The breadcrumb stem will be a Form property, so it
     self.breadcrumb_stem = self.label_title.text
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 13**:
   - `self.label_title.text` &rarr; take the current text value of the lable_title on this form (MainForm)
@@ -91,7 +91,7 @@ Adjust the `link_home_click` handler by adding the highlighted code below:
     self.label_title.text = self.breadcrumb_stem
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 21**:
   - `self.breadcrumb_stem` &rarr; take the value in the breadcrumb_stem variable
@@ -112,7 +112,7 @@ Next we will do the CalendarComponent. Go to the `link_calendar_click` handler a
     self.label_title.text = self.breadcrumb_stem + " - Calendar"
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 21**:
   - `self.breadcrumb_stem` &rarr; take the value in the breadcrumb_stem variable

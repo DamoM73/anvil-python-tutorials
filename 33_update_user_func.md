@@ -38,7 +38,7 @@ def update_user(first_name, last_name):
   __user = the_user()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 26** &rarr; creates the **update_user** function which requires **first_name** and **last_name** to be passed.
 - **line 27** &rarr; allows the function to edit the value of `__user`
@@ -77,7 +77,7 @@ Then we need to change the code of the **button_save_click** hander in the **Set
     main_form.switch_component("account")
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **lines 36 - 37** &rarr; calls the **update_user** function pass in the values from the first_name and last_name text boxes.
 ```

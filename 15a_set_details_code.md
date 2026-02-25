@@ -56,7 +56,7 @@ In the `button_save_click` hander, remove the comment and the `pass` statement, 
       return
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 18:**
   - `self.text_box_first_name.text` &rarr; get the current value of the text in `text_box_first_name`
@@ -119,7 +119,7 @@ Add the highlighted code to the `button_save_click` handler.
     print(self.text_box_first_name.text, self.text_box_last_name.text)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 28:**
   - `self.label_error.visible = False` &rarr; hides the error message

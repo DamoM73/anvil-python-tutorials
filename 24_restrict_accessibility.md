@@ -93,7 +93,7 @@ In the `__init__` method add the highlighted code:
       self.button_add.visible = False
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 21** &rarr; checks if there is a user currently logged in
 - **lines 22 - 24** &rarr; sets the UI to display the elements appropriate for a logged in user

@@ -58,7 +58,7 @@ def add_assessment(user, subject, details, start_date, due_date):
                                  completed=False)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 **line 10** &rarr; adds `user` as a value to be passed when the method is called
 ```
@@ -82,7 +82,7 @@ def add_assessment(subject, details, start_date, due_date):
   my_assessment()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 51** &rarr; retrieves the cached user data
 - **line 52** &rarr; adds the cached user data to the arguments passed to **add_assessment**
@@ -113,7 +113,7 @@ def get_assessment(user):
                                       completed=False)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 **line 19** &rarr; adds `user` as a value to be passed when the method is called
 ```
@@ -141,7 +141,7 @@ def my_assessment():
   return __assessments
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 39** &rarr; retrieves the cached user data
 - **line 46** &rarr; adds the cached user data to the arguments passed to **get_assessment**
@@ -190,7 +190,7 @@ def get_chart(assessments):
     df = pd.DataFrame(data)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 **line 19** &rarr; adds `assessments` as a value to be passed when the method is called
 ```
@@ -217,7 +217,7 @@ def get_chart():
   return __chart
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 82** &rarr; retrieves the cached assessments data
 - **line 83** &rarr; adds the cached user data to the arguments passed to **get_chart**

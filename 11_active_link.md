@@ -69,7 +69,7 @@ Lets place this method after the `__init__` and before the link handlers, also a
   def link_home_click(self, **event_args):
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 18**:
   - `def set_active_link` &rarr; names the new method **set_active_link**
@@ -103,7 +103,7 @@ First we'll do the home link.
       self.link_home.role = None
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 19**:
   - `if state == "home":` &rarr; checks to see if **"home"** was passed as the state.
@@ -126,7 +126,7 @@ Now we need to call `set_active_link` from the `link_home_click` event handler.
     self.set_active_link("home")
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 37**:
   - `self.set_active_link("home")` &rarr; call the **set_active_link** method and pass the state **"home"**

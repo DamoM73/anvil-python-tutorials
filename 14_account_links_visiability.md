@@ -87,7 +87,7 @@ Then you want to enact our plan above by writing the highlighted code at the bot
     self.link_logout.visible = anvil.users.get_user()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 37**:
   - will set the visibility of `link_register` to opposite of the value returned by `anvil.users.get_user()`
@@ -131,7 +131,7 @@ Before we test our code, we have one more issue we need to resolve. We need to r
     self.set_active_link("home")
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 These have been copied from the `link_home_click` method and are all the steps we need to do to load the **HomeComponent**.
 ```

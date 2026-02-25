@@ -39,7 +39,7 @@ class AddComponent(AddComponentTemplate):
     self.due = None
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **lines 14 & 15** &rarr; since **Subject** and **Details** store text, we create empty strings for their variables.
 - **lines 16 & 15** &rarr; **Start** and **Due** are both dates, which are objects, so their empty variables are set using `None`
@@ -64,7 +64,7 @@ class AddComponent(AddComponentTemplate):
     self.label_error.visible = False
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 20** &rarr; sets the label error to not vissible
 ```
@@ -97,7 +97,7 @@ The first code we add to the `button_add_click` event handler checks that the us
       self.label_error.text = "Due date needed"
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **lines 24 & 27** &rarr; checks that the text box has a value (remember string truthiness)
 - **lines 30 & 33** &rarr; checks that a date has been picked (remember object truthiness)
@@ -140,7 +140,7 @@ Now we want to display a message to the user about what values will be saved.
       self.label_error.text = f"{self.subject} {self.details} assessment: {self.start} to {self.due} recorded"
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 37** &rarr; makes the message available
 - **lines 38 - 41** &rarr; reads the values from the form and stores them in the variables
@@ -210,7 +210,7 @@ Under the **button_add_click** handler add the following code (be careful with y
     self.label_message.text = message
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 44** &rarr; creates the `display_error` method, which accepts an argument called `message`
 - **line 45** &rarr; turns the label visible
@@ -263,7 +263,7 @@ Add the following code under the **display_error** method (remember to check ind
     self.label_message.text = message
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 47** &rarr; creates the `display_save` method, which accepts an argument called `message`
 - **line 48** &rarr; turns the label visible
@@ -320,7 +320,7 @@ Under the **display_save** method add the following code:
     self.date_picker_due.date = None
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 54** &rarr; creates the `reset_form` method
 - **lines 55 - 58** &rarr; returns all the variables to their initialisation state

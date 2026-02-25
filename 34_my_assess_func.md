@@ -46,7 +46,7 @@ __user = None
 __assessments = None
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 9** &rarr; creates the private variable `__assessments` to store the assessment data
 ```
@@ -71,7 +71,7 @@ def my_assessment():
   return __assessments
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 35** &rarr; creates the **my_assessment** method
 - **line 36** &rarr; allows the method to edit the value of `__assessments`
@@ -104,7 +104,7 @@ import anvil.users
 from .. import data_access
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 8** &rarr; gives **HomeComponent** access to the **data_access** methods
 ```
@@ -123,7 +123,7 @@ from .. import data_access
     self.repeating_panel_1.items = data_access.my_assessment()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 16** &rarr; uses our new **my_assessment** method to provide the data for the repeating panels.
 ```
@@ -165,7 +165,7 @@ def add_assessment(subject, details, start_date, due_date):
   my_assessment()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 46** &rarr; creates the **add_assessment** method, which requires **subject**, **details**, **start_date** and **due_date** to be passed
 - **line 47** &rarr; allows the method to edit the value of `__assessments`
@@ -204,7 +204,7 @@ Now we need to replace the call to the database, with a call to our new method.
       self.reset_form()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 47** &rarr; calls our new caching method and passes the required values
 ```
@@ -258,7 +258,7 @@ def update_assessment(assessment_id, subject, details, start_date, due_date, com
   my_assessment()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 54** &rarr; creates the update_assessment method with all the required data to be passed
 - **line 55** &rarr; allows the method to change the `__assessments` value
@@ -286,7 +286,7 @@ import datetime
 from ... import data_access
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 9** &rarr; gives **HomeComponent** access to the **data_access** methods
 ```
@@ -315,7 +315,7 @@ from ... import data_access
     self.switch_components()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 37-43** &rarr; uses our new caching method to make changes to the assessment data
 ```

@@ -47,7 +47,7 @@ def add_assessment(subject, details, start_date, due_date):
                                  completed=False)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 7** &rarr; this is the decorator that tells Anvil that this function can be called from the **frontend**
 - **line 8** &rarr; creates the **add_assessment** function which expects the values of subject, details, start_date, and due_date to be passed.
@@ -85,7 +85,7 @@ In the **else** section of the **button_add_click** handler, add the highlighted
       self.reset_form()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 38** &rarr; calls the **add_assessments** function that we just created. 
   - It is important that this is called before the **reset_form**, as **reset_form** deletes all the values we wish to save to the **Assessments** table.

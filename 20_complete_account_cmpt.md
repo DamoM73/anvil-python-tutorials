@@ -37,7 +37,7 @@ Open the **SetDetailsComponent** in code mode, then add the highlighted code to 
       self.text_box_last_name.text = user["last_name"]
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 16:**
   - `user = anvil.users.get_user()` &rarr; retrieves the current user's row from the **User table**.

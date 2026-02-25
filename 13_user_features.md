@@ -33,7 +33,7 @@ Go to the **link_register_click** handler. Delete the comment and the `pass` sta
     anvil.users.signup_with_form(allow_cancel=True)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 64**:
   - `signup_with_form` &rarr; use the built-in registration form
@@ -63,7 +63,7 @@ Go to the **link_logout_click** handler. Delete the comment and the `pass` state
     anvil.users.logout()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 70**:
   - `logout()` &rarr; use the built-in logout feature
@@ -84,7 +84,7 @@ Go to the **link_login_click** handler. Delete the comment and the `pass` statem
     anvil.users.login_with_form(allow_cancel=True)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 67**:
   - `login_with_form` &rarr; use the built-in login form
@@ -115,7 +115,7 @@ It is really hard to test if our user features work, as we have no indication if
     print("Logout", anvil.users.get_user())
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 All three are estentially the same, so I'll just explain the first.
 

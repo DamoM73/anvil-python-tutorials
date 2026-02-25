@@ -37,7 +37,7 @@ In the **check_box_completed_change** event handler, replace lines 24 and 25 wit
     anvil.server.call('update_assessment_completed', self.item.get_id(), new_value)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 24** &rarr; takes the current value from **check_box_completed**
 - **line 25** &rarr; sends that value to the server
@@ -65,7 +65,7 @@ def update_assessment_completed(assessment_id, completed):
     assessment["completed"] = completed
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 25** &rarr; makes the functional callable by frontend code
 - **line 26** &rarr; creates the `update_assessment_completed` function which accept 2 arguments:

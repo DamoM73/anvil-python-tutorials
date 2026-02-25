@@ -49,7 +49,7 @@ In the **button_edit_click** handler use the code below to copy the values from 
     self.date_picker_due.date = self.item["due_date"]
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 28** &rarr; takes **subject** value for specific assessment for this panel and saves it as the text for the subject text box.
 - **line 29** &rarr; takes **details** value for specific assessment for this panel and saves it as the text for the details text box.
@@ -85,7 +85,7 @@ We will do this with one function that will work for both event handlers. Add th
     self.button_save.visible = not self.button_save.visible
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 37** &rarr; create the **switch_components** method
 - **lines 39 - 43** &rarr; swaps the **visibility** value for each of the display elements
@@ -106,7 +106,7 @@ Finally, to call the **switch_components** method from the **button_edit_click**
     self.switch_components()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 32** &rarr; called the **switch_component** method
 ```
@@ -153,7 +153,7 @@ def update_assessment(assessment_id, subject, details, start_date, due_date, com
         assessment['completed'] = completed
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 26** &rarr; makes this function callable by the frontend
 - **line 27** &rarr; create the `update_assessments` function which requires the following data to be passed:
@@ -191,7 +191,7 @@ First thing we will do is write the values to the **Assessments** table. Go to t
                      self.check_box_completed.checked)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 35** &rarr; a comment to help structure the method
 - **lines 36 - 42** &rarr; calls the function we just created in the **assessment_service**. The first argument needs to be the name of the function being called. The other arguments are the date the function needs passed.
@@ -223,7 +223,7 @@ Add the highlighted code to the end of the **button_save_click** event handler.
     self.label_due.text = self.date_picker_due.date.strftime('%d/%m/%Y')
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 44** &rarr; a comment to help structure the method
 - **line 45** &rarr; assigns the value in the subject text box to the subject label

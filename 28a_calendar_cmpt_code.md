@@ -60,7 +60,7 @@ import plotly.express as px
 import pandas as pd
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 6** &rarr; imports the plotly.express library and assigns it the **px** alias
 - **line 7** &rarr; imports the pandas library and assigns it the **pd** alias
@@ -87,7 +87,7 @@ def get_chart():
                                        completed=False)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 44** &rarr; makes **get_chart** callable from the frontend
 - **line 45** &rarr; creates the **get_chart** method
@@ -122,7 +122,7 @@ def get_chart():
     df = pd.DataFrame(data)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 53** &rarr; creates the **data** list to be used for processing the data
 - **line 54** &rarr; iterates over all the assessments stored in the **assessments** variable
@@ -168,7 +168,7 @@ def get_chart():
     return fig
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **lines 65 - 71** &rarr; creates the timeline chart and stores it in the variable **fig**
   - **df** &rarr; the dataframe for the chart
@@ -197,7 +197,7 @@ Now that we have a backend method that provides the chart, we need to call that 
     self.plot_timeline.figure = fig
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 24** &rarr; creates the **load_chart** method
 - **line 25** &rarr; gets the chart by calling the **get_chart** backend function we just created
@@ -225,7 +225,7 @@ Now that we have a backend method that provides the chart, we need to call that 
       self.card_error.visible = True
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 20** &rarr; runs the **load_chart** method when the **Calendar Component** is loaded.
 ```
@@ -280,7 +280,7 @@ Lets implement this:
     df = pd.DataFrame(data)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 56** &rarr; stores the start date in the **start_date** variable
 - **line 57** &rarr; stores the due date in the **due_date** variable
@@ -316,7 +316,7 @@ Now we have adjusted the start and due dates, we need to put these values into t
     df = pd.DataFrame(data)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 66** &rarr; add our adjusted **due_date** to the dataframe
 ```
@@ -354,7 +354,7 @@ We will only be concerned with removing the y-axis title.
     return fig
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 80** &rarr; makes the y-axis blank
 ```

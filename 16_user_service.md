@@ -74,7 +74,7 @@ def update_user(first_name, last_name):
   user["last_name"] = last_name
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 7:**
   - `@anvil.server.callable` &rarr; the decorator that allows the client-side code to call this function
@@ -118,7 +118,7 @@ Replace line 30 with the highlighted text.
                     self.text_box_last_name.text)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 Note: lines 30 - 32 are one statement, it has just been spread over three lines to make it easier to read (you can split arguements after a `,`).
 

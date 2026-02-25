@@ -29,7 +29,7 @@ import anvil.users
 from ..SetDetailsComponent import SetDetailsComponent
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 It is important to note that clicking the **Edit Details** button will still cause an error. We will worry about fixing this problem after we have refactored the code.
 ```

@@ -34,7 +34,7 @@ def get_assessment():
                                        user=user)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 18** &rarr; the decorator that allows the frontend to call this backend function
 - **line 19** &rarr; defines the **get_assessment** function, note no arguments required
@@ -66,7 +66,7 @@ Open the **HomeComponent** in the **code** mode and then add the highlighted cod
     self.repeating_panel_1.items = anvil.server.call('get_assessment')
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 6** &rarr; calls the **get_assessment** function and then connects the returned list to **repearing_panel_1** items.
 ```
@@ -118,7 +118,7 @@ The repeating panel is connected to a list of items. This means that each instan
 When the code uses `self.item` is refers to the specific data item belonging to this specific panel. This means you can acces the values in the item just like a dicitonary.
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 17** &rarr; read the **completed** value for this panel's item and display it in the **check_box_completed**
 - **line 18** &rarr; read the **subject** value for this panel's item and display it in the **label_subject**

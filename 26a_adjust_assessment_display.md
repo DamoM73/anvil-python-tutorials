@@ -28,7 +28,7 @@ Open the **get_assessment** function in the **assessment_service** and make the 
                                        completed=False)
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **`completed=False`** &rarr; just like line 26, this is a restriction on the rows that will be retrieved. Only those assessments that have not been completed will be retrieved.
 ```

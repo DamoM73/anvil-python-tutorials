@@ -37,7 +37,7 @@ __assessments = None
 __chart = None
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 9** &rarr; creates the private variable `__chart` to store the diagram
 ```
@@ -62,7 +62,7 @@ def get_chart():
   return __chart
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 70** &rarr; creates the **get_chart** method
 - **line 71** &rarr; allows the method to edit the value of `__chart`
@@ -99,7 +99,7 @@ def update_assessment(assessment_id, subject, details, start_date, due_date, com
   my_assessment()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 68** &rarr; reset `__chart` to `None` meaning the next time **get_chart** is called, a new chart will be built and cached.
 ```
@@ -120,7 +120,7 @@ Finally we need to replace the call to backend in **CalendarComponent**
     self.plot_timeline.figure = fig
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 **line 27** &rarr; retrieves the cached chart
 ```

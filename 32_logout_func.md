@@ -37,7 +37,7 @@ def logout():
   anvil.users.logout()
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 21** &rarr; creates the **logout** function
 - **line 22** &rarr; allows the function to edit the value of `__user`
@@ -59,7 +59,7 @@ Now we need to change the **link_logout_click** handler so it calls this functio
     self.switch_component("home")
 ```
 
-```{admonition} Code explaination
+```{admonition} Code explanation
 :class: notice
 - **line 95** &rarr; calls the **logout** function we just made
 ```
