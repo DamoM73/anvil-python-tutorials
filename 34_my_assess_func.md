@@ -67,7 +67,7 @@ def my_assessment():
     return __assessments
 
   print("Accessing assessments from database")
-  __assessments = anvil.server.call('get_assessment', user)
+  __assessments = anvil.server.call('get_assessment')
   return __assessments
 ```
 
