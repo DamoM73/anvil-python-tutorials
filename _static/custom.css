@@ -1,3 +1,21 @@
+/* Apply one sans-serif stack across the whole Jupyter Book. */
+body,
+.content,
+.sidebar,
+.toc-drawer,
+.main,
+.article-container {
+    font-family: var(--font-stack);
+}
+
+/* Keep code blocks on the monospace stack. */
+code,
+pre,
+kbd,
+samp {
+    font-family: var(--font-stack--monospace);
+}
+
 table {
     width: 100%;
 }
